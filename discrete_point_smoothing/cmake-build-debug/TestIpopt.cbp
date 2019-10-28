@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="TestIpopt"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestIpopt">
+				<Option output="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/TestIpopt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zhp/CLionProjects/ReferenceLineSmoothing/../../local_install/Ipopt-3.11.8/include/coin"/>
+					<Add directory="/home/zhp/CLionProjects/ReferenceLineSmoothing/../../adolc_base/include"/>
+					<Add directory="/home/zhp/local_install/Ipopt-3.12.8/include/coin"/>
+					<Add directory="/home/zhp/adolc_base/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestIpopt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestIpopt/fast">
+				<Option output="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/TestIpopt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zhp/CLionProjects/ReferenceLineSmoothing/../../local_install/Ipopt-3.11.8/include/coin"/>
+					<Add directory="/home/zhp/CLionProjects/ReferenceLineSmoothing/../../adolc_base/include"/>
+					<Add directory="/home/zhp/local_install/Ipopt-3.12.8/include/coin"/>
+					<Add directory="/home/zhp/adolc_base/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestIpopt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ReferenceLineSmoothing">
+				<Option output="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/ReferenceLineSmoothing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zhp/CLionProjects/ReferenceLineSmoothing/../../local_install/Ipopt-3.11.8/include/coin"/>
+					<Add directory="/home/zhp/CLionProjects/ReferenceLineSmoothing/../../adolc_base/include"/>
+					<Add directory="/home/zhp/local_install/Ipopt-3.12.8/include/coin"/>
+					<Add directory="/home/zhp/adolc_base/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ReferenceLineSmoothing"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ReferenceLineSmoothing/fast">
+				<Option output="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/ReferenceLineSmoothing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zhp/CLionProjects/ReferenceLineSmoothing/../../local_install/Ipopt-3.11.8/include/coin"/>
+					<Add directory="/home/zhp/CLionProjects/ReferenceLineSmoothing/../../adolc_base/include"/>
+					<Add directory="/home/zhp/local_install/Ipopt-3.12.8/include/coin"/>
+					<Add directory="/home/zhp/adolc_base/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ReferenceLineSmoothing/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zhp/CLionProjects/ReferenceLineSmoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/zhp/CLionProjects/ReferenceLineSmoothing/main.cpp">
+			<Option target="ReferenceLineSmoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/CLionProjects/ReferenceLineSmoothing/math/discretized_points_smoothing/fem_pos_deviation_ipopt_interface.cpp">
+			<Option target="ReferenceLineSmoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/CLionProjects/ReferenceLineSmoothing/math/discretized_points_smoothing/fem_pos_deviation_ipopt_interface.h">
+			<Option target="ReferenceLineSmoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/CLionProjects/ReferenceLineSmoothing/math/discretized_points_smoothing/fem_pos_deviation_smoother.cpp">
+			<Option target="ReferenceLineSmoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/CLionProjects/ReferenceLineSmoothing/math/discretized_points_smoothing/fem_pos_deviation_smoother.h">
+			<Option target="ReferenceLineSmoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/CLionProjects/ReferenceLineSmoothing/math/discretized_points_smoothing/fem_pos_deviation_smoother_config.h">
+			<Option target="ReferenceLineSmoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/CLionProjects/ReferenceLineSmoothing/reference_line/discrete_points_reference_line_smoother.cpp">
+			<Option target="ReferenceLineSmoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/CLionProjects/ReferenceLineSmoothing/reference_line/discrete_points_reference_line_smoother.h">
+			<Option target="ReferenceLineSmoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/CLionProjects/ReferenceLineSmoothing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="qp_spline_smoothing"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\eigen3\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qp_spline_smoothing">
+				<Option output="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/qp_spline_smoothing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/qpoases/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 qp_spline_smoothing"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qp_spline_smoothing/fast">
+				<Option output="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/qp_spline_smoothing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/qpoases/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 qp_spline_smoothing/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/curve1d/cubic_polynomial_curve1d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/curve1d/quartic_polynomial_curve1d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/curve1d/quintic_polynomial_curve1d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/line/line_segment2d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/line/linear_interpolation.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/math/cartesian_frenet_conversion.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/math/math_utils.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/math/search.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/path/discretized_path.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/path/frenet_frame_path.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/path/path_data.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/path/sl_boundary.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/pnc_point/vec2d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/polynomial_xd/curve_math.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/polynomial_xd/polynomial_xd.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/active_set_qp_solver.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/affine_constraint.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/piecewise_linear_constraint.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/piecewise_linear_generator.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/piecewise_linear_kernel.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/qp_solver.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline2d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_1d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_1d_constraint.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_1d_generator.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_1d_kernel.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_1d_seg.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_2d_constraint.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_2d_kernel.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_2d_seg.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_2d_solver.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/spline_seg_kernel.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/surface/aabox2d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/surface/box2d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/surface/polygon2d.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/main.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/qp_spline_reference_line_smooth.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_point.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/../../../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
