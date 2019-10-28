@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/include -I/usr/include/eigen3 -I/usr/include/python2.7 -I/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/qpoases/include 
+CXX_INCLUDES = -I/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/include -I/usr/include/eigen3 -I/usr/include/python2.7 -I/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/qpoases/include -I/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/proj4/include 
 

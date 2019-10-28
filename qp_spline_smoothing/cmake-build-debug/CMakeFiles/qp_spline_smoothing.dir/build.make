@@ -512,18 +512,18 @@ CMakeFiles/qp_spline_smoothing.dir/source/common/surface/polygon2d.cpp.s: cmake_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qp_spline_smoothing.dir/source/common/surface/polygon2d.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/surface/polygon2d.cpp -o CMakeFiles/qp_spline_smoothing.dir/source/common/surface/polygon2d.cpp.s
 
-CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.o: CMakeFiles/qp_spline_smoothing.dir/flags.make
-CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.o: ../source/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/main.cpp
+CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: CMakeFiles/qp_spline_smoothing.dir/flags.make
+CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: ../source/qp_spline_smoothing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/qp_spline_smoothing.cpp
 
-CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/main.cpp > CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.i
+CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/qp_spline_smoothing.cpp > CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.i
 
-CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/main.cpp -o CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.s
+CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/qp_spline_smoothing.cpp -o CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.s
 
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/qp_spline_reference_line_smooth.cpp.o: CMakeFiles/qp_spline_smoothing.dir/flags.make
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/qp_spline_reference_line_smooth.cpp.o: ../source/reference_line/qp_spline_reference_line_smooth.cpp
@@ -551,9 +551,22 @@ CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line.cpp.s: c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line.cpp -o CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line.cpp.s
 
+CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: CMakeFiles/qp_spline_smoothing.dir/flags.make
+CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: ../source/reference_line/reference_line_provider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line_provider.cpp
+
+CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line_provider.cpp > CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.i
+
+CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line_provider.cpp -o CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.s
+
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.o: CMakeFiles/qp_spline_smoothing.dir/flags.make
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.o: ../source/reference_line/reference_point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_point.cpp
 
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.i: cmake_force
@@ -563,6 +576,19 @@ CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.i: 
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_point.cpp -o CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.s
+
+CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.o: CMakeFiles/qp_spline_smoothing.dir/flags.make
+CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.o: ../source/trans/trans_data.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/trans/trans_data.cpp
+
+CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/trans/trans_data.cpp > CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.i
+
+CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/trans/trans_data.cpp -o CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.s
 
 # Object files for target qp_spline_smoothing
 qp_spline_smoothing_OBJECTS = \
@@ -601,10 +627,12 @@ qp_spline_smoothing_OBJECTS = \
 "CMakeFiles/qp_spline_smoothing.dir/source/common/surface/aabox2d.cpp.o" \
 "CMakeFiles/qp_spline_smoothing.dir/source/common/surface/box2d.cpp.o" \
 "CMakeFiles/qp_spline_smoothing.dir/source/common/surface/polygon2d.cpp.o" \
-"CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.o" \
+"CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o" \
 "CMakeFiles/qp_spline_smoothing.dir/source/reference_line/qp_spline_reference_line_smooth.cpp.o" \
 "CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line.cpp.o" \
-"CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.o"
+"CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o" \
+"CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.o" \
+"CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.o"
 
 # External object files for target qp_spline_smoothing
 qp_spline_smoothing_EXTERNAL_OBJECTS =
@@ -644,15 +672,18 @@ qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_lin
 qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/common/surface/aabox2d.cpp.o
 qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/common/surface/box2d.cpp.o
 qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/common/surface/polygon2d.cpp.o
-qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.o
+qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o
 qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/reference_line/qp_spline_reference_line_smooth.cpp.o
 qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line.cpp.o
+qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o
 qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.o
+qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.o
 qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/build.make
 qp_spline_smoothing: /usr/lib/x86_64-linux-gnu/libpython2.7.so
 qp_spline_smoothing: ../3rd-party/qpoases/lib/Debug/libqpoases_linux_x64.a
+qp_spline_smoothing: ../3rd-party/proj4/lib/Debug/libproj4_linux_x64.a
 qp_spline_smoothing: CMakeFiles/qp_spline_smoothing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Linking CXX executable qp_spline_smoothing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX executable qp_spline_smoothing"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qp_spline_smoothing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

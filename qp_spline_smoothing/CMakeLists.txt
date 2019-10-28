@@ -23,4 +23,12 @@ file(GLOB ENV_QPOASES_LIB ${CMAKE_CURRENT_SOURCE_DIR}/3rd-party/qpoases/lib/Debu
 include_directories(${ENV_QPOASES_INCLUDE})
 link_libraries(${ENV_QPOASES_LIB})
 
-target_link_libraries(qp_spline_smoothing ${PYTHON_LIBRARIES} ${ENV_QPOASES_LIB})
+set(ENV_PROJ4_INCLUDE  "${CMAKE_CURRENT_SOURCE_DIR}/3rd-party/proj4/include")
+file(GLOB ENV_PROJ4_LIB ${CMAKE_CURRENT_SOURCE_DIR}/3rd-party/proj4/lib/Debug/libproj4_linux_x64.a)
+include_directories(${ENV_PROJ4_INCLUDE})
+link_libraries(${ENV_PROJ4_LIB})
+
+target_link_libraries(qp_spline_smoothing
+        ${PYTHON_LIBRARIES}
+        ${ENV_QPOASES_LIB}
+        ${ENV_PROJ4_LIB})

@@ -78,8 +78,8 @@ namespace planning
                        const double &minSpeed,const long long linkId, const int laneId,
                        const int leftMarkingType, const  int rightMarkingType);
 
-        ReferencePoint(const had_map::MapPoint &point_info, const double kappa,
-                      const double dkappa);
+//        ReferencePoint(const had_map::MapPoint &point_info, const double kappa,
+//                      const double dkappa);
 
         ReferencePoint(const had_map::MapPoint &point_info, const double &kappa,
                        const double &dkappa, const double &xds,

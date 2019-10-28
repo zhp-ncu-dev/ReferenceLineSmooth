@@ -39,10 +39,12 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/surface/aabox2d.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/surface/aabox2d.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/surface/box2d.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/surface/box2d.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/surface/polygon2d.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/surface/polygon2d.cpp.o"
-  "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/main.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/main.cpp.o"
+  "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/qp_spline_smoothing.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/qp_spline_reference_line_smooth.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/qp_spline_reference_line_smooth.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line.cpp.o"
+  "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line_provider.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_point.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_point.cpp.o"
+  "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/trans/trans_data.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -52,6 +54,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/eigen3"
   "/usr/include/python2.7"
   "../3rd-party/qpoases/include"
+  "../3rd-party/proj4/include"
   )
 
 # Targets to which this target links.

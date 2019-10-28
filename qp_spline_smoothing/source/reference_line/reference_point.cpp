@@ -20,6 +20,7 @@ namespace planning
                    const double &right_width):m_point(point_info),m_kappa(kappa),m_dkappa(dkappa),m_xds(xds),m_yds(yds),
                                               m_xseconds(xsenconds),m_yseconds(ysenconds),
                                                m_leftWidth(left_width), m_rightWidth(right_width){}
+
     ReferencePoint::ReferencePoint(const had_map::MapPoint &point_info, const double &kappa,
                    const double &dkappa, const double &xds,
                    const double &yds, const double &xsenconds,
