@@ -3095,6 +3095,7 @@ CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: ../3rd-part
 CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: ../3rd-party/qpoases/include/qpOASES/extras/SolutionAnalysis.hpp
 CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: ../3rd-party/qpoases/include/qpOASES/extras/SolutionAnalysis.ipp
 CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: ../include/common/line/line_segment2d.h
+CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: ../include/common/math/math_utils.h
 CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: ../include/common/path/sl_boundary.h
 CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: ../include/common/pnc_point/map_point.h
 CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o: ../include/common/pnc_point/sl_point.h

@@ -14,29 +14,26 @@ namespace planning
             planning::ReferenceLine &referenceLine)
     {
         std::vector<GaussData> raw_reference_line;
-        std::vector<GaussData> spare_ference_line;
 
-        ImportData(raw_reference_line, spare_ference_line);
+        ImportData(raw_reference_line);
 
         double laneWidth = 3.5;
         std::vector<ReferencePoint> referencePoints;
         std::vector<double> accumulateS;
-        for (const GaussData &spareLine : spare_ference_line)
+        for (const GaussData &referencePoint : raw_reference_line)
         {
             had_map::MapPoint mapPoint(
-                    math::Vec2d{spareLine.x, spareLine.y},
-                    math::degreeToRadian(spareLine.heading));
+                    math::Vec2d{referencePoint.x, referencePoint.y},
+                    referencePoint.heading);
             ReferencePoint point(mapPoint, laneWidth/2.0, laneWidth/2.0);
-            accumulateS.emplace_back(spareLine.s);
+            accumulateS.emplace_back(referencePoint.s);
             referencePoints.emplace_back(point);
         }
         ReferenceLine line(referencePoints, accumulateS);
         referenceLine = line;
     }
 
-    bool TransData::ImportData(
-            std::vector<GaussData>& raw_reference_line ,
-            std::vector<GaussData>& spare_ference_line)
+    bool TransData::ImportData(std::vector<GaussData>& raw_reference_line )
     {
         std::vector<InsData> Ins_Data;
 
@@ -54,6 +51,7 @@ namespace planning
         GaussData InputData;
         dPoint Bol;
         dPoint Col;
+        double sumS = 0.0;
         for(uint16_t i = 0; i < iNum; ++i)
         {
             Bol.x = Ins_Data[i].x/100000000.0;
@@ -63,57 +61,23 @@ namespace planning
             InputData.x = Col.x;
             InputData.y = Col.y;
             InputData.heading = Ins_Data[i].heading;
-            InputData.s = 0.000;
+
+            if(i == 0)
+            {
+                InputData.s = 0.000;
+            }
+            else
+            {
+                sumS += sqrt((InputData.x - raw_reference_line[i-1].x) *
+                        (InputData.x - raw_reference_line[i-1].x) +
+                        (InputData.y - raw_reference_line[i-1].y) *
+                        (InputData.y - raw_reference_line[i-1].y));
+                InputData.s = sumS;
+            }
+
             InputData.z = 0.000;
             raw_reference_line.emplace_back(InputData);
         }
-
-        if(SpareReferenceLine(raw_reference_line,spare_ference_line))
-        {
-            std::cout << "raw_reference_line has been spared successfully !" << std::endl ;
-        }
-        else
-        {
-            std::cout << "raw_reference_line has been spared failly !" << std::endl ;
-            return false;
-        }
-
-        return true;
-    }
-
-    bool TransData::SpareReferenceLine(
-            std::vector<GaussData> &raw_reference_line,
-            std::vector<GaussData> &spare_ference_line)
-    {
-        int iNum = raw_reference_line.size() , currentpoint = 1 ; //
-        double interval = 0.5;
-        double sum_dis = 0.0 , dis = 0.0 ;
-        GaussData sparepoint;
-
-        raw_reference_line[0].s = 0;
-
-        // 忽略了最后一个点的距离
-        sparepoint = raw_reference_line[0];
-        spare_ference_line.push_back(sparepoint);
-        for(int i = currentpoint; i < iNum-1; ++i)
-        {
-            dis = sqrt(pow(raw_reference_line[i+1].x - raw_reference_line[i].x , 2)
-                       + (pow(raw_reference_line[i+1].y - raw_reference_line[i].y , 2)));
-            raw_reference_line[i].s = raw_reference_line[i-1].s + dis;
-            sum_dis += dis;
-            if(sum_dis >= interval)
-            {
-                currentpoint = i;
-                sparepoint = raw_reference_line[currentpoint];
-                spare_ference_line.push_back(sparepoint);
-                sum_dis = 0.0;
-            }
-        }
-        raw_reference_line.back().s = raw_reference_line[iNum-2].s
-                                     + sqrt(pow(raw_reference_line[iNum-1].x - raw_reference_line[iNum-2].x , 2)
-                                         + (pow(raw_reference_line[iNum-1].y - raw_reference_line[iNum-2].y , 2)));
-        sparepoint = raw_reference_line.back();
-        spare_ference_line.push_back(sparepoint);
 
         return true;
     }

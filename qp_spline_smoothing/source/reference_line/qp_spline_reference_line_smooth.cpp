@@ -95,38 +95,45 @@ namespace planning
             point_info.set_x(xy.first);
             point_info.set_y(xy.second);
             point_info.setHeading(heading);
-            double left_width;
-            double right_width;
-            if(!raw_reference_line.getLeftAndRightWidth(point_info,left_width,right_width))
-            {
-                continue;
-            }
-            double minSpeed;
-            double maxSpeed;
-            if(!raw_reference_line.getSpeed(point_info,maxSpeed,minSpeed))
-            {
-                continue;
-            }
-//            had_map::MapPoint goalPoint;
-//            math::gussPointToRFU(orginPoint,point_info,goalPoint);
-//            double x = goalPoint.x();
-//            double y = goalPoint.y();
-//            double heading1 = goalPoint.heading();
-//            printf("x = %f,y= %f,heading = %f\r\n",x,y,heading1);
 
+///
             double s = t * ((anchor_points_.back().abs_s- anchor_points_.front().abs_s)) / (end_t - start_t);
-            LinkLaneSegment linkLaneSegment = raw_reference_line.getLinkLaneByS(s + anchor_points_.front().abs_s);
             ref_s.emplace_back(s);
+
+            double left_width = 1.75;
+            double right_width = 1.75;
+
+            ref_points.emplace_back(ReferencePoint(point_info, kappa, dkappa, xds, yds, xseconds, yseconds, left_width, right_width));
+///
+
+//            double left_width = 1.75;
+//            double right_width = 1.75;
+//            if(!raw_reference_line.getLeftAndRightWidth(point_info,left_width,right_width))
+//            {
+//                continue;
+//            }
+//            double minSpeed = 0;
+//            double maxSpeed = 120;
+//            if(!raw_reference_line.getSpeed(point_info,maxSpeed,minSpeed))
+//            {
+//                continue;
+//            }
+
+//            double s = t * ((anchor_points_.back().abs_s- anchor_points_.front().abs_s)) / (end_t - start_t);
+//            LinkLaneSegment linkLaneSegment = raw_reference_line.getLinkLaneByS(s + anchor_points_.front().abs_s);
+//            ref_s.emplace_back(s);
 //            printf("s = %f,xds = %f, yds = %f, heading = %f,kappa = %f\r\n", s, xds,yds, heading, kappa);
-            ref_points.emplace_back(ReferencePoint(point_info,kappa,dkappa,xds,yds,xseconds,yseconds,left_width,right_width,maxSpeed,minSpeed,linkLaneSegment));
+//            ref_points.emplace_back(ReferencePoint(point_info,kappa,dkappa,xds,yds,xseconds,yseconds,left_width,right_width,maxSpeed,minSpeed,linkLaneSegment));
         }
         if(ref_points.size() < 2)
         {
             return false;
         }
+        ref_points[0].setKappa(ref_points[1].kappa());
+        ref_points[0].setDkappa(ref_points[1].dkappa());
         *smoothed_reference_line = ReferenceLine(ref_points,ref_s);
-        smoothed_reference_line->setSpacingDis(spacingDis);
-        smoothed_reference_line->reCalculateSegments();
+//        smoothed_reference_line->setSpacingDis(spacingDis);
+//        smoothed_reference_line->reCalculateSegments();
         return true;
     }
 
@@ -190,7 +197,7 @@ namespace planning
         }
         else
         {
-//            printf("xds = %f,yds = %f,xseconds = %f,yseconds = %f\r\n",anchor_points_.front().xds,anchor_points_.front().yds,anchor_points_.front().xseconds,anchor_points_.front().yseconds);
+            printf("xds = %f,yds = %f,xseconds = %f,yseconds = %f\r\n",anchor_points_.front().xds,anchor_points_.front().yds,anchor_points_.front().xseconds,anchor_points_.front().yseconds);
             if(!spline_constraint->AddPointSecondDerivativeSmoothConstraint(evaluated_t.front(),
                                                                             anchor_points_.front().xds,
                                                                             anchor_points_.front().yds,

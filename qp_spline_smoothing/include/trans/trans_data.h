@@ -39,7 +39,7 @@ namespace planning
         bool createReferenceLine(ReferenceLine &referenceLine);
 
     private:
-        bool ImportData(std::vector<GaussData>& raw_reference_line , std::vector<GaussData>& spare_ference_line);
+        bool ImportData(std::vector<GaussData>& raw_reference_line);
 
         bool ImportInsData(std::vector<InsData>& insdata);
 
