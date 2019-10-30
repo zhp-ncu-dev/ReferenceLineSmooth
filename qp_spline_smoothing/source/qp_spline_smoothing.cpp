@@ -1,4 +1,5 @@
 #include <iostream>
+#include <time.h>
 #include "trans/trans_data.h"
 #include "reference_line/reference_line.h"
 #include "reference_line/reference_line_provider.h"
@@ -9,6 +10,7 @@ namespace plt = matplotlibcpp;
 
 int main()
 {
+    clock_t startTime, endTime;
     using planning::TransData;
     using planning::ReferenceLine;
     using planning::ReferenceLineProvide;
@@ -21,13 +23,19 @@ int main()
 
     ReferenceLine referenceLineResult;
     ReferenceLineProvide referenceLineProvider;
+    startTime = clock();
     referenceLineProvider.smoothReferenceLine(referenceLine, &referenceLineResult, 0.1, true);
+    endTime = clock();
+    std::cout << "smooth referenceline spendTime = " <<
+            static_cast<double>(endTime - startTime) / CLOCKS_PER_SEC <<std::endl;
 
     // get results
     std::vector<ReferencePoint> originPoints = referenceLine.referencePoints();
     std::vector<double> originS = referenceLine.accumulateS();
     std::vector<ReferencePoint> refPoints = referenceLineResult.referencePoints();
     std::vector<double> s = referenceLineResult.accumulateS();
+
+    std::cout << "平滑距离 s = " << s.back() << std::endl;
 
     // plot
     MapPoint pointInfo;
@@ -37,7 +45,7 @@ int main()
         pointInfo = point.pointInfo();
         originX.emplace_back(pointInfo.x());
         originY.emplace_back(pointInfo.y());
-        originHeading.emplace_back(pointInfo.heading());
+        originHeading.emplace_back(radianToDegree(pointInfo.heading()));
     }
 
     std::vector<double> x, y, heading, kappa, dkappa;

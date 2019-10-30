@@ -19,6 +19,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/pnc_point/vec2d.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/pnc_point/vec2d.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/polynomial_xd/curve_math.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/polynomial_xd/curve_math.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/polynomial_xd/polynomial_xd.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/polynomial_xd/polynomial_xd.cpp.o"
+  "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.o"
+  "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.o"
+  "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/active_set_qp_solver.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/smooth_spline/active_set_qp_solver.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/affine_constraint.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/smooth_spline/affine_constraint.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/piecewise_linear_constraint.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/smooth_spline/piecewise_linear_constraint.cpp.o"
@@ -40,6 +43,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/surface/box2d.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/surface/box2d.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/surface/polygon2d.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/surface/polygon2d.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/qp_spline_smoothing.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o"
+  "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/discrete_points_reference_line_smooth.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/qp_spline_reference_line_smooth.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/qp_spline_reference_line_smooth.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line.cpp.o"
   "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line_provider.cpp" "/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o"
@@ -55,6 +59,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/python2.7"
   "../3rd-party/qpoases/include"
   "../3rd-party/proj4/include"
+  "../3rd-party/osqp/include"
   )
 
 # Targets to which this target links.

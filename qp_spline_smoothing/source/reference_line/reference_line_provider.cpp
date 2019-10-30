@@ -5,15 +5,19 @@
 #include "common/math/math_utils.h"
 #include "common/config/config.h"
 #include "reference_line/reference_line_provider.h"
+#include "reference_line/discrete_points_reference_line_smooth.h"
 
 namespace planning
 {
     AnchorPoint ReferenceLineProvide::GetAnchorPoint(const ReferenceLine &reference_line,
                                double s) const
     {
+        FemPosDeviationSmootherConfig config;
+        double longitudinalBound = ReferenceLineSmoothAlgorithm ? config.longitudinalBoundaryBound : FLAGS_longitudinal_boundary_bound;
+        double lateralBound = ReferenceLineSmoothAlgorithm ? config.lateralBoundaryBound : FLAGS_lateral_boundary_bound;
         AnchorPoint anchor_point;
-        anchor_point.longitudinal_bound = FLAGS_longitudinal_boundary_bound;
-        anchor_point.lateral_bound = FLAGS_lateral_boundary_bound;
+        anchor_point.longitudinal_bound = longitudinalBound;
+        anchor_point.lateral_bound = lateralBound;
         anchor_point.abs_s = s;
         ReferencePoint ref_point = reference_line.getNearstPoint(s);
         anchor_point.pointInfo = ref_point.pointInfo();
@@ -27,7 +31,9 @@ namespace planning
     void ReferenceLineProvide::GetAnchorPoints(const ReferenceLine &reference_line,
                                 std::vector<AnchorPoint> *anchor_points)
     {
-        const double interval = FLAGS_max_point_interval;
+        FemPosDeviationSmootherConfig config;
+        const double interval = ReferenceLineSmoothAlgorithm ? config.maxConstraintInterval : FLAGS_max_point_interval;
+
         //一共的段数再加上起点坐标
         int num_of_anchor = std::max(2, static_cast<int>(reference_line.length() / interval + 0.5));
         std::vector<double> anchor_s;
@@ -46,15 +52,29 @@ namespace planning
     }
 
     bool ReferenceLineProvide::smoothReferenceLine(const ReferenceLine &raw_reference_line, ReferenceLine *reference_line,
-                                                   const double &longitudinalSpeed,bool dif_time_smooth)
+                                                   const double &deltaS,bool dif_time_smooth)
     {
+        FemPosDeviationSmootherConfig config;
+
         std::vector<AnchorPoint> anchor_points;
         GetAnchorPoints(raw_reference_line,&anchor_points);
-        QpSplineReferenceLineSmooth smoother_;
-        smoother_.setAnchorPoints(anchor_points, dif_time_smooth);
-        if (!smoother_.smooth(raw_reference_line, longitudinalSpeed,reference_line)) {
-            return false;
+        if(!ReferenceLineSmoothAlgorithm)
+        {
+            QpSplineReferenceLineSmooth smoother_;
+            smoother_.setAnchorPoints(anchor_points, dif_time_smooth);
+            if (!smoother_.smooth(raw_reference_line, deltaS,reference_line)) {
+                return false;
+            }
         }
+        else
+        {
+            planning::DiscretePointsReferenceLineSmooth smoother(config);
+            smoother.setAnchorPoints(anchor_points);
+            if (!smoother.smooth(raw_reference_line, deltaS, reference_line)) {
+                return false;
+            }
+        }
+
         return true;
     }
 

@@ -22,9 +22,13 @@ namespace planning
         std::vector<double> accumulateS;
         for (const GaussData &referencePoint : raw_reference_line)
         {
+            if(referencePoint.s > 200.0)
+            {
+                break;
+            }
             had_map::MapPoint mapPoint(
                     math::Vec2d{referencePoint.x, referencePoint.y},
-                    referencePoint.heading);
+                    degreeToRadian(referencePoint.heading));
             ReferencePoint point(mapPoint, laneWidth/2.0, laneWidth/2.0);
             accumulateS.emplace_back(referencePoint.s);
             referencePoints.emplace_back(point);

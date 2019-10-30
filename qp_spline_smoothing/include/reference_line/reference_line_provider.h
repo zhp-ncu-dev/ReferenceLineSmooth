@@ -17,7 +17,7 @@ class ReferenceLineProvide
         ~ReferenceLineProvide() = default;
 
         bool smoothReferenceLine(const ReferenceLine &raw_reference_line, ReferenceLine *reference_line,
-                                 const double &longitudinalSpeed, bool dif_time_smooth);
+                                 const double &deltaS, bool dif_time_smooth);
 
     private:
         AnchorPoint GetAnchorPoint(const ReferenceLine& reference_line,

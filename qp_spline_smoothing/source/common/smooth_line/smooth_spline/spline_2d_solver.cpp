@@ -1,7 +1,7 @@
 //
 // Created by gaoyang on 18-12-3.
 //
-#include "common/smooth_line/smooth_spline/smooth_reference_line_config.h"
+#include "common/config/reference_line_config/smooth_reference_line_config.h"
 #include "common/smooth_line/smooth_spline/spline_2d_solver.h"
 #include "Eigen/Core"
 #include "Eigen/LU"

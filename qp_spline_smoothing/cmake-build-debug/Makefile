@@ -528,6 +528,87 @@ source/common/polynomial_xd/polynomial_xd.cpp.s:
 	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/polynomial_xd/polynomial_xd.cpp.s
 .PHONY : source/common/polynomial_xd/polynomial_xd.cpp.s
 
+source/common/smooth_line/discreted_points_smooth/discrete_points_math.o: source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.o
+
+.PHONY : source/common/smooth_line/discreted_points_smooth/discrete_points_math.o
+
+# target to build an object file
+source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.o:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.o
+.PHONY : source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.o
+
+source/common/smooth_line/discreted_points_smooth/discrete_points_math.i: source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.i
+
+.PHONY : source/common/smooth_line/discreted_points_smooth/discrete_points_math.i
+
+# target to preprocess a source file
+source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.i:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.i
+.PHONY : source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.i
+
+source/common/smooth_line/discreted_points_smooth/discrete_points_math.s: source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.s
+
+.PHONY : source/common/smooth_line/discreted_points_smooth/discrete_points_math.s
+
+# target to generate assembly for a file
+source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.s:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.s
+.PHONY : source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.s
+
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.o: source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.o
+
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.o
+
+# target to build an object file
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.o:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.o
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.o
+
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.i: source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.i
+
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.i
+
+# target to preprocess a source file
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.i:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.i
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.i
+
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.s: source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.s
+
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.s
+
+# target to generate assembly for a file
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.s:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.s
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp.s
+
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.o: source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.o
+
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.o
+
+# target to build an object file
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.o:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.o
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.o
+
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.i: source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.i
+
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.i
+
+# target to preprocess a source file
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.i:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.i
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.i
+
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.s: source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.s
+
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.s
+
+# target to generate assembly for a file
+source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.s:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.s
+.PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.s
+
 source/common/smooth_line/smooth_spline/active_set_qp_solver.o: source/common/smooth_line/smooth_spline/active_set_qp_solver.cpp.o
 
 .PHONY : source/common/smooth_line/smooth_spline/active_set_qp_solver.o
@@ -1095,6 +1176,33 @@ source/qp_spline_smoothing.cpp.s:
 	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.s
 .PHONY : source/qp_spline_smoothing.cpp.s
 
+source/reference_line/discrete_points_reference_line_smooth.o: source/reference_line/discrete_points_reference_line_smooth.cpp.o
+
+.PHONY : source/reference_line/discrete_points_reference_line_smooth.o
+
+# target to build an object file
+source/reference_line/discrete_points_reference_line_smooth.cpp.o:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o
+.PHONY : source/reference_line/discrete_points_reference_line_smooth.cpp.o
+
+source/reference_line/discrete_points_reference_line_smooth.i: source/reference_line/discrete_points_reference_line_smooth.cpp.i
+
+.PHONY : source/reference_line/discrete_points_reference_line_smooth.i
+
+# target to preprocess a source file
+source/reference_line/discrete_points_reference_line_smooth.cpp.i:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.i
+.PHONY : source/reference_line/discrete_points_reference_line_smooth.cpp.i
+
+source/reference_line/discrete_points_reference_line_smooth.s: source/reference_line/discrete_points_reference_line_smooth.cpp.s
+
+.PHONY : source/reference_line/discrete_points_reference_line_smooth.s
+
+# target to generate assembly for a file
+source/reference_line/discrete_points_reference_line_smooth.cpp.s:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.s
+.PHONY : source/reference_line/discrete_points_reference_line_smooth.cpp.s
+
 source/reference_line/qp_spline_reference_line_smooth.o: source/reference_line/qp_spline_reference_line_smooth.cpp.o
 
 .PHONY : source/reference_line/qp_spline_reference_line_smooth.o
@@ -1284,6 +1392,15 @@ help:
 	@echo "... source/common/polynomial_xd/polynomial_xd.o"
 	@echo "... source/common/polynomial_xd/polynomial_xd.i"
 	@echo "... source/common/polynomial_xd/polynomial_xd.s"
+	@echo "... source/common/smooth_line/discreted_points_smooth/discrete_points_math.o"
+	@echo "... source/common/smooth_line/discreted_points_smooth/discrete_points_math.i"
+	@echo "... source/common/smooth_line/discreted_points_smooth/discrete_points_math.s"
+	@echo "... source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.o"
+	@echo "... source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.i"
+	@echo "... source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.s"
+	@echo "... source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.o"
+	@echo "... source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.i"
+	@echo "... source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.s"
 	@echo "... source/common/smooth_line/smooth_spline/active_set_qp_solver.o"
 	@echo "... source/common/smooth_line/smooth_spline/active_set_qp_solver.i"
 	@echo "... source/common/smooth_line/smooth_spline/active_set_qp_solver.s"
@@ -1347,6 +1464,9 @@ help:
 	@echo "... source/qp_spline_smoothing.o"
 	@echo "... source/qp_spline_smoothing.i"
 	@echo "... source/qp_spline_smoothing.s"
+	@echo "... source/reference_line/discrete_points_reference_line_smooth.o"
+	@echo "... source/reference_line/discrete_points_reference_line_smooth.i"
+	@echo "... source/reference_line/discrete_points_reference_line_smooth.s"
 	@echo "... source/reference_line/qp_spline_reference_line_smooth.o"
 	@echo "... source/reference_line/qp_spline_reference_line_smooth.i"
 	@echo "... source/reference_line/qp_spline_reference_line_smooth.s"

@@ -7,7 +7,7 @@
 #include <common/line/linear_interpolation.h>
 
 #include "common/math/math_utils.h"
-#include "common/smooth_line/smooth_spline/smooth_reference_line_config.h"
+#include "common/config/reference_line_config/smooth_reference_line_config.h"
 #include "common/config/planner_config/planner_param.h"
 #include "common/surface/box2d.h"
 #include "reference_line/reference_line.h"

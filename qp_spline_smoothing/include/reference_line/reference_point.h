@@ -95,7 +95,7 @@ namespace planning
                        const double &limit_min_speed,const LinkLaneSegment &linkLaneSegment1);
 
         ReferencePoint(const had_map::MapPoint &point_info,const double &left_width,
-                       const double &right_width );
+                       const double &right_width);
 
         double xds()const;
 

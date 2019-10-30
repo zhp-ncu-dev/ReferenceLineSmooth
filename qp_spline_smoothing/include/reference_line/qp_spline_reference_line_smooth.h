@@ -6,7 +6,7 @@
 #define PLANNING_QP_SPLINE_REFERENCE_LINE_SMOOTH_H
 
 #include "reference_line.h"
-#include "common/smooth_line/smooth_spline/smooth_reference_line_config.h"
+#include "common/config/reference_line_config/smooth_reference_line_config.h"
 #include "common/smooth_line/smooth_spline/spline_2d_solver.h"
 
 namespace planning

@@ -39,6 +39,7 @@
 					<Add directory="/usr/include/python2.7"/>
 					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/qpoases/include"/>
 					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/proj4/include"/>
+					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/osqp/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -67,6 +68,7 @@
 					<Add directory="/usr/include/python2.7"/>
 					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/qpoases/include"/>
 					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/proj4/include"/>
+					<Add directory="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/3rd-party/osqp/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -139,6 +141,15 @@
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/polynomial_xd/polynomial_xd.cpp">
 			<Option target="qp_spline_smoothing"/>
 		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/active_set_qp_solver.cpp">
 			<Option target="qp_spline_smoothing"/>
 		</Unit>
@@ -200,6 +211,9 @@
 			<Option target="qp_spline_smoothing"/>
 		</Unit>
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/qp_spline_smoothing.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/discrete_points_reference_line_smooth.cpp">
 			<Option target="qp_spline_smoothing"/>
 		</Unit>
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/qp_spline_reference_line_smooth.cpp">
