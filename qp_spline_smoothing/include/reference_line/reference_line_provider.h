@@ -20,11 +20,21 @@ class ReferenceLineProvide
                                  const double &deltaS, bool dif_time_smooth);
 
     private:
-        AnchorPoint GetAnchorPoint(const ReferenceLine& reference_line,
-                                   double s) const;
+        AnchorPoint GetAnchorPoint(
+                const ReferenceLine& reference_line,
+                double s,
+                const std::vector<double> &rawReferenceLineKappas) const;
 
-        void GetAnchorPoints(const ReferenceLine &reference_line,
-                                                   std::vector<AnchorPoint> *anchor_points);
+        void GetAnchorPoints(
+                const ReferenceLine &reference_line,
+                std::vector<AnchorPoint> *anchor_points,
+                const std::vector<double> &rawReferenceLineKappas);
+
+        void caculateRawReferenceLineKappas(
+                const ReferenceLine &raw_reference_line,
+                std::vector<double> &rawReferenceLineKappas);
+
+        std::vector<double> const *m_rawReferenceLineKappas;
     };
 }
 

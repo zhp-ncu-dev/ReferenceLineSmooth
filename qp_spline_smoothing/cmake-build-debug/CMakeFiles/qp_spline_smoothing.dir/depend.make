@@ -3770,6 +3770,7 @@ CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: ../include/common/pnc_point/sl_point.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: ../include/common/pnc_point/vec2d.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: ../include/common/polynomial_xd/polynomial_xd.h
+CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: ../include/common/smooth_line/discreted_points_smooth/discrete_points_math.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: ../include/common/smooth_line/smooth_spline/affine_constraint.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: ../include/common/smooth_line/smooth_spline/spline2d.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: ../include/common/smooth_line/smooth_spline/spline_2d_constraint.h

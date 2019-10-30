@@ -1,7 +1,6 @@
 //
 // Created by zhp on 19-10-29.
 //
-
 #include "common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.h"
 #include "reference_line/discrete_points_reference_line_smooth.h"
 #include "common/smooth_line/discreted_points_smooth/discrete_points_math.h"
@@ -167,7 +166,8 @@ namespace planning
         std::vector<double> dkappas;
         std::vector<double> accumulatedS;
         if (!DiscretePointsMath::ComputePathProfile(
-                xyPoints, &headings, &accumulatedS, &kappas, &dkappas)) {
+                xyPoints, &headings, &accumulatedS, &kappas, &dkappas))
+        {
             return false;
         }
 
@@ -197,4 +197,3 @@ namespace planning
     }
 
 }// end namespace
-

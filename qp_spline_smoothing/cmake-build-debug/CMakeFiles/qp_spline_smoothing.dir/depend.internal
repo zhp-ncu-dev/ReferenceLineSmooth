@@ -3771,6 +3771,7 @@ CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider
  ../include/common/pnc_point/sl_point.h
  ../include/common/pnc_point/vec2d.h
  ../include/common/polynomial_xd/polynomial_xd.h
+ ../include/common/smooth_line/discreted_points_smooth/discrete_points_math.h
  ../include/common/smooth_line/smooth_spline/affine_constraint.h
  ../include/common/smooth_line/smooth_spline/spline2d.h
  ../include/common/smooth_line/smooth_spline/spline_2d_constraint.h

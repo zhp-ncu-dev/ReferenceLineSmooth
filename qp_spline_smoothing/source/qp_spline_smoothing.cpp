@@ -39,12 +39,15 @@ int main()
 
     // plot
     MapPoint pointInfo;
+    pointInfo = originPoints[0].pointInfo();
+    double zeroX = pointInfo.x();
+    double zeroY = pointInfo.y();
     std::vector<double> originX, originY, originHeading;
     for(auto const & point : originPoints)
     {
         pointInfo = point.pointInfo();
-        originX.emplace_back(pointInfo.x());
-        originY.emplace_back(pointInfo.y());
+        originX.emplace_back(pointInfo.x() - zeroX);
+        originY.emplace_back(pointInfo.y() - zeroY);
         originHeading.emplace_back(radianToDegree(pointInfo.heading()));
     }
 
@@ -52,8 +55,8 @@ int main()
     for (auto const &point : refPoints)
     {
         pointInfo = point.pointInfo();
-        x.emplace_back(pointInfo.x());
-        y.emplace_back(pointInfo.y());
+        x.emplace_back(pointInfo.x() - zeroX);
+        y.emplace_back(pointInfo.y() - zeroY);
         heading.emplace_back(radianToDegree(pointInfo.heading()));
         kappa.emplace_back(point.kappa());
         dkappa.emplace_back(point.dkappa());
