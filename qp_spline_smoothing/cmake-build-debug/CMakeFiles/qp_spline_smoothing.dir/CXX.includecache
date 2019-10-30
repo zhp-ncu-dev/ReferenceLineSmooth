@@ -202,14 +202,18 @@ qpOASES/extras/SolutionAnalysis.ipp
 
 ../3rd-party/qpoases/include/qpOASES/extras/SolutionAnalysis.ipp
 
-../include/common/config/config.h
-cstdio
--
-cmath
--
-
 ../include/common/config/reference_line_config/smooth_reference_line_config.h
 stdint-gcc.h
+-
+
+../include/common/curve1d/cubic_spline.h
+cstdio
+-
+cassert
+-
+vector
+-
+algorithm
 -
 
 ../include/common/line/line_segment2d.h
@@ -249,6 +253,20 @@ cstdint
 -
 vector
 -
+
+../include/common/smooth_line/discreted_points_smooth/discrete_points_math.h
+utility
+-
+vector
+-
+
+../include/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.h
+utility
+-
+vector
+-
+common/config/reference_line_config/smooth_reference_line_config.h
+../include/common/smooth_line/discreted_points_smooth/common/config/reference_line_config/smooth_reference_line_config.h
 
 ../include/common/smooth_line/smooth_spline/affine_constraint.h
 Eigen/Dense
@@ -360,25 +378,21 @@ common/surface/box2d.h
 common/pnc_point/sl_point.h
 ../include/reference_line/common/pnc_point/sl_point.h
 
-../include/reference_line/reference_line_provider.h
-list
--
-qp_spline_reference_line_smooth.h
-../include/reference_line/qp_spline_reference_line_smooth.h
-
 ../include/reference_line/reference_point.h
 common/pnc_point/map_point.h
 ../include/reference_line/common/pnc_point/map_point.h
 
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line_provider.cpp
-common/math/math_utils.h
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/common/math/math_utils.h
-common/config/config.h
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/common/config/config.h
-reference_line/reference_line_provider.h
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line/reference_line_provider.h
+/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/discrete_points_reference_line_smooth.cpp
+common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.h
+/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.h
 reference_line/discrete_points_reference_line_smooth.h
 /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/reference_line/discrete_points_reference_line_smooth.h
+common/smooth_line/discreted_points_smooth/discrete_points_math.h
+/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/common/smooth_line/discreted_points_smooth/discrete_points_math.h
+common/curve1d/cubic_spline.h
+/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/common/curve1d/cubic_spline.h
+common/math/math_utils.h
+/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/common/math/math_utils.h
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

@@ -3247,6 +3247,7 @@ CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_referen
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o: ../include/common/config/reference_line_config/smooth_reference_line_config.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o: ../include/common/curve1d/cubic_spline.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o: ../include/common/line/line_segment2d.h
+CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o: ../include/common/math/math_utils.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o: ../include/common/path/sl_boundary.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o: ../include/common/pnc_point/map_point.h
 CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o: ../include/common/pnc_point/sl_point.h

@@ -3248,6 +3248,7 @@ CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_referen
  ../include/common/config/reference_line_config/smooth_reference_line_config.h
  ../include/common/curve1d/cubic_spline.h
  ../include/common/line/line_segment2d.h
+ ../include/common/math/math_utils.h
  ../include/common/path/sl_boundary.h
  ../include/common/pnc_point/map_point.h
  ../include/common/pnc_point/sl_point.h

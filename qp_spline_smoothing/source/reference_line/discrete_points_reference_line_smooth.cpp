@@ -6,6 +6,7 @@
 #include "reference_line/discrete_points_reference_line_smooth.h"
 #include "common/smooth_line/discreted_points_smooth/discrete_points_math.h"
 #include "common/curve1d/cubic_spline.h"
+#include "common/math/math_utils.h"
 
 namespace planning
 {
@@ -170,7 +171,18 @@ namespace planning
             return false;
         }
 
-        // heading 转换
+        // heading 转换:
+        // todo: 平滑后的 heading 与 原始值相差了 1°, 待解决
+        for(size_t i = 0; i < headings.size(); ++i)
+        {
+            double angle = -headings[i] - degreeToRadian(90);
+            double a = std::fmod(angle + M_PI, 2.0 * M_PI);
+            if(a < 0.0)
+            {
+                a = a + 2.0 * M_PI;
+            }
+            headings[i] = a;
+        }
 
         std::vector<ReferencePoint> referencePoints;
         size_t pointsSize = xyPoints.size();

@@ -27,7 +27,7 @@ int main()
     referenceLineProvider.smoothReferenceLine(referenceLine, &referenceLineResult, 0.1, true);
     endTime = clock();
     std::cout << "smooth referenceline spendTime = " <<
-            static_cast<double>(endTime - startTime) / CLOCKS_PER_SEC <<std::endl;
+            static_cast<double>(endTime - startTime) / CLOCKS_PER_SEC << std::endl;
 
     // get results
     std::vector<ReferencePoint> originPoints = referenceLine.referencePoints();
@@ -85,13 +85,13 @@ int main()
     plt::xlabel("s");
     plt::ylabel("kappa");
 
-    plt::figure(4);
-    plt::plot(s, dkappa, "r-");
-
-    plt::grid("True");
-    //plt::axis("equal");
-    plt::xlabel("s");
-    plt::ylabel("dkappa");
+//    plt::figure(4);
+//    plt::plot(s, dkappa, "r-");
+//
+//    plt::grid("True");
+//    //plt::axis("equal");
+//    plt::xlabel("s");
+//    plt::ylabel("dkappa");
 
     plt::show();
     return 0;

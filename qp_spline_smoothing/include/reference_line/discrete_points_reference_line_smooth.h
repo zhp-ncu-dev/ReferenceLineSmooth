@@ -19,6 +19,7 @@ namespace planning
         void setAnchorPoints(std::vector<AnchorPoint> &anchorPoints)
         {
             m_anchorPoints = anchorPoints;
+            m_zeroHeading = anchorPoints.front().pointInfo.heading();
         };
 
         bool smooth(const ReferenceLine &rawReferenceLine,
@@ -49,6 +50,7 @@ namespace planning
 
         double m_zeroX = 0.0;
         double m_zeroY = 0.0;
+        double m_zeroHeading = 0.0;
 
         FemPosDeviationSmootherConfig m_femPosDeviationSmootherConfig;
     };
