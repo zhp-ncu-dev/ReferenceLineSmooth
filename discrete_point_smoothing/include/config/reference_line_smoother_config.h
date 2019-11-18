@@ -24,10 +24,10 @@ public:
     // The output resolution for discrete point smoother reference line is
     // directly decided by max_constraint_interval
 
-    double max_constraint_interval = 2.2;
+    double max_constraint_interval = 0.5;
 
-    double longitudinal_boundary_bound = 0.5;
-    double lateral_boundary_bound = 0.5;
+    double longitudinal_boundary_bound = 0.25;
+    double lateral_boundary_bound = 0.25;
 
     double max_lateral_boundary_bound = 0.5;
     double min_lateral_boundary_bound = 0.2;

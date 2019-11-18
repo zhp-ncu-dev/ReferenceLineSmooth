@@ -56,14 +56,14 @@ int main(int argv, char* argc[])
         refPointsY[i] = (*ref_points)[i].y - (*ref_points)[0].y;
         refPointsYaw[i] = (*ref_points)[i].heading * 180.0 / M_PI;
         refPointsS[i] = (*ref_points)[i].s;
-        refPointsKappa[i] = (*ref_points)[i].kappa;
+        refPointsKappa[i] = std::atan(((*ref_points)[i].kappa) * 2.95) * 180.0 / M_PI;
         refPointsDKappa[i] = (*ref_points)[i].dkappa;
     }
 
     // figure(1)
     plt::figure(1);
     plt::plot(spareReferenceLineX, spareReferenceLineY, "b.");
-    plt::plot(refPointsX, refPointsY, "r.");
+    plt::plot(refPointsX, refPointsY, "r-");
 
     plt::grid("True");
     plt::axis("equal");
@@ -71,24 +71,31 @@ int main(int argv, char* argc[])
     plt::ylabel("y[m]");
 
     // figure(2)
-    plt::figure(2);
-    plt::plot(spareReferenceLineS, spareReferenceLineYaw, "b.");
-    plt::plot(refPointsS, refPointsYaw, "r.");
+//    plt::figure(2);
+//    plt::plot(spareReferenceLineS, spareReferenceLineYaw, "b.");
+//    plt::plot(refPointsS, refPointsYaw, "r.");
 
-    plt::grid("True");
-    //plt::axis("equal");
-    plt::xlabel("s");
-    plt::ylabel("yaw");
+//    plt::grid("True");
+//    //plt::axis("equal");
+//    plt::xlabel("s");
+//    plt::ylabel("yaw");
 
     // figure(3)
     plt::figure(3);
-    plt::plot(refPointsS, refPointsKappa, "b-");
-    //plt::plot(refPointsS, refPointsDKappa, "r.");
+    plt::plot(refPointsS, refPointsKappa, "r.");
 
     plt::grid("True");
     //plt::axis("equal");
     plt::xlabel("s");
-    plt::ylabel("kappa/dkappa");
+    plt::ylabel("delta");
+
+    // figure(4)
+    plt::figure(4);
+    plt::plot(refPointsS, refPointsDKappa, "r.");
+    plt::grid("True");
+    //plt::axis("equal");
+    plt::xlabel("s");
+    plt::ylabel("dkappa");
 
     plt::show();
 

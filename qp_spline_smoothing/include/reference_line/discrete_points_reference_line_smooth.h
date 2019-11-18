@@ -19,12 +19,17 @@ namespace planning
         void setAnchorPoints(std::vector<AnchorPoint> &anchorPoints)
         {
             m_anchorPoints = anchorPoints;
-            m_zeroHeading = anchorPoints.front().pointInfo.heading();
         };
 
         bool smooth(const ReferenceLine &rawReferenceLine,
                     const double &deltaS,
                     ReferenceLine *const smoothedReferenceLine);
+
+        bool smooth(const ReferenceLine &rawReferenceLine,
+                    const double &deltaS,
+                    ReferenceLine *const smoothedReferenceLine,
+                    bool flag,
+                    const std::vector<std::vector<AnchorPoint>> &isnotUTurnPoints);
 
     private:
         bool femPosSmooth(
@@ -37,6 +42,21 @@ namespace planning
                 std::vector<std::pair<double, double>> &smoothedPoint2d,
                 const double &deltaS);
 
+        void linearInterpolate(
+                const std::pair<double, double> &startPoint,
+                const std::pair<double, double> &endPoint,
+                const double &startHeading,
+                const double &endHeading,
+                const double &startKappa,
+                const double &endKappa,
+                const double &startDkappa,
+                const double &endDkappa,
+                const double &deltaS,
+                std::vector<std::pair<double, double>> &points2d,
+                std::vector<double> &headings,
+                std::vector<double> &kappas,
+                std::vector<double> &dkappas);
+
         void normalizePoints(std::vector<std::pair<double, double>>* xyPoints);
 
         void deNormalizePoints(std::vector<std::pair<double, double>>* xyPoints);
@@ -45,12 +65,15 @@ namespace planning
                 const std::vector<std::pair<double, double>>& xyPoints,
                 ReferenceLine *const smoothedReferenceLine);
 
+        bool generateRefPointProfile(
+                const std::vector<std::vector<std::pair<double, double>>> &smoothedPoints2dVec,
+                const double &deltaS,
+                ReferenceLine *const smoothedReferenceLine);
+
         std::vector<AnchorPoint> m_anchorPoints;
-        std::vector<double> m_accumulatedS;
 
         double m_zeroX = 0.0;
         double m_zeroY = 0.0;
-        double m_zeroHeading = 0.0;
 
         FemPosDeviationSmootherConfig m_femPosDeviationSmootherConfig;
     };

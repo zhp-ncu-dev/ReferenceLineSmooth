@@ -3,6 +3,7 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="discrete_point_smoothing" targetName="ReferenceLineSmoothing" />
+      <config projectName="discrete_point_smoothing" targetName="discrete_point_smoothing" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -12,392 +13,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73be7904-9fb6-479e-9e61-95eeb0c0e8cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/discrete_point_smoothing.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/.idea/ReferenceLineSmoothing.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/adalloc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/adolc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/adolc_openmp.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/adolc_sparse.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/adouble.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/adoublecuda.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/adtl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/adutils.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/adutilsc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/advector.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/checkpointing.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/convolut.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/drivers/drivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/drivers/odedrivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/drivers/psdrivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/drivers/taylor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/externfcts.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/externfcts2.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/fixpoint.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/fortutils.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/interfaces.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/internal/adolc_settings.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/internal/adubfunc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/internal/common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/internal/paramfunc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/internal/usrparms.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/lie/drivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/param.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/revolve.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/sparse/sparse_fo_rev.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/sparse/sparsedrivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/tapedoc/tapedoc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/include/adolc/taping.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/lib64/libadolc.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/lib64/libadolc.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/lib64/libadolc.so.2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/lib64/libadolc.so.2.1.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc/lib64/pkgconfig/adolc.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adalloc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adolc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adolc_fatalerror.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adolc_openmp.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adolc_sparse.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adouble.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adoublecuda.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adtl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adtl_hov.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adtl_indo.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adutils.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/adutilsc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/advector.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/checkpointing.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/convolut.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/drivers/drivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/drivers/odedrivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/drivers/psdrivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/drivers/taylor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/edfclasses.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/externfcts.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/externfcts2.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/fixpoint.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/fortutils.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/interfaces.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/internal/adolc_settings.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/internal/adubfunc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/internal/common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/internal/paramfunc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/internal/usrparms.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/lie/drivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/param.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/revolve.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/sparse/sparse_fo_rev.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/sparse/sparsedrivers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/tapedoc/tapedoc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/include/adolc/taping.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/lib64/libadolc.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/lib64/libadolc.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/lib64/libadolc.so.2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/lib64/libadolc.so.2.1.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/adolc_base/lib64/pkgconfig/adolc.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/examples/Basic/Generate_seed_matrix_for_Hessian" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/examples/Basic/Generate_seed_matrix_for_Jacobian" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/examples/Basic/color_bipartite_graph_using_BipartiteGraphBicoloringInterface" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/examples/Basic/color_bipartite_graph_using_BipartiteGraphPartialColoringInterface" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/examples/Basic/color_graph_using_GraphColoringInterface" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/BipartiteGraphBicoloring.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/BipartiteGraphBicoloringInterface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/BipartiteGraphCore.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/BipartiteGraphInputOutput.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/BipartiteGraphOrdering.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/BipartiteGraphPartialColoring.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/BipartiteGraphPartialColoringInterface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/BipartiteGraphPartialOrdering.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/BipartiteGraphVertexCover.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/ColPackHeaders.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/CoutLock.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/Definitions.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/DisjointSets.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/File.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/GraphColoring.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/GraphColoringInterface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/GraphCore.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/GraphInputOutput.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/GraphOrdering.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/HessianRecovery.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/JacobianRecovery1D.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/JacobianRecovery2D.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/MatrixDeallocation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/Pause.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/RecoveryCore.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/StringTokenizer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/Timer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/command_line_parameter_processor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/current_time.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/extra.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/mmio.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/include/ColPack/stat.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/lib/libColPack.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/lib/libColPack.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/lib/libColPack.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/lib/libColPack.so.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/colpack/lib/libColPack.so.0.0.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/AmplTNLP.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/HSLLoader.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpAlgBuilder.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpAlgStrategy.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpAlgTypes.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpAugSystemSolver.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpBlas.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpCachedResults.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpCompoundMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpCompoundSymMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpCompoundVector.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpConvCheck.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpDebug.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpDenseVector.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpDiagMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpEqMultCalculator.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpException.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpExpansionMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpGenTMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpHessianUpdater.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpIdentityMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpIpoptAlg.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpIpoptApplication.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpIpoptCalculatedQuantities.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpIpoptData.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpIpoptNLP.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpIterateInitializer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpIteratesVector.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpIterationOutput.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpJournalist.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpLapack.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpLineSearch.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpMuUpdate.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpNLP.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpNLPScaling.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpObserver.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpOptionsList.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpOrigIpoptNLP.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpPDSystemSolver.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpReferenced.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpRegOptions.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpReturnCodes.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpReturnCodes.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpReturnCodes.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpReturnCodes_inc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpScaledMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpSearchDirCalculator.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpSmartPtr.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpSolveStatistics.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpStdCInterface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpSumSymMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpSymLinearSolver.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpSymMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpSymScaledMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpSymTMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpTNLP.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpTNLPAdapter.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpTNLPReducer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpTaggedObject.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpTimedTask.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpTimingStatistics.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpTripletHelper.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpTypes.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpUtils.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpVector.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpZeroSymMatrix.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/IpoptConfig.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/PardisoLoader.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/arith.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/asl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/asl_pfg.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/asl_pfgh.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/defs.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/dmumps_c.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/funcadd.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/getstub.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/macros.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/metis.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/mumps_c_types.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/mumps_compat.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/mumps_mpi.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/nlp.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/nlp2.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/opcode.hd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/proto.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/psinfo.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/r_opn.hd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/rename.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/stdio1.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/include/coin/ThirdParty/struct.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinasl.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinasl.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinasl.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinasl.so.1.3.6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinblas.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinblas.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinblas.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinblas.so.1.4.6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinlapack.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinlapack.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinlapack.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinlapack.so.1.5.6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinmetis.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinmetis.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinmetis.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinmetis.so.1.3.5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinmumps.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinmumps.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinmumps.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libcoinmumps.so.1.6.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libipopt.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libipopt.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libipopt.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libipopt.so.1.10.8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libipoptamplinterface.la" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libipoptamplinterface.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libipoptamplinterface.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/libipoptamplinterface.so.1.10.8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/pkgconfig/coinasl.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/pkgconfig/coinblas.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/pkgconfig/coinlapack.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/pkgconfig/coinmetis.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/pkgconfig/coinmumps.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/pkgconfig/ipopt.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/ipopt/lib/pkgconfig/ipoptamplinterface.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/auxil.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/constants.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/cs.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/ctrlc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/glob_opts.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/kkt.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/lin_alg.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/lin_sys.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/osqp.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/osqp_configure.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/polish.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/proj.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/scaling.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/types.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/osqp/util.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/qdldl/qdldl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/include/qdldl/qdldl_types.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/cmake/osqp/osqp-config.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/cmake/osqp/osqp-targets-noconfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/cmake/osqp/osqp-targets.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/cmake/qdldl/qdldl-config.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/cmake/qdldl/qdldl-targets-noconfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/cmake/qdldl/qdldl-targets.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/libosqp.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/libosqp.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/libqdldl.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/osqp/lib/libqdldl.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/proj4/include/proj4/geodesic.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/proj4/include/proj4/proj.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/proj4/include/proj4/proj_api.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/proj4/include/proj4/projects.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/proj4/lib/Debug/libproj4_linux_arm64.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/proj4/lib/Debug/libproj4_linux_x64.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/3rd_party/proj4/lib/Release/libproj4_linux_x64.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/Ins_Data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/3.14.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/3.14.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/common/gradient_descent/bucketedqueue.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/common/gradient_descent/dynamicvoronoi.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/common/gradient_descent/node2d.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/common/gradient_descent/node3d.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/common/math/linear_interpolation.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/common/math/vec2d.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/reference_line/reference_line.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/reference_line/reference_line_provider.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/reference_line_smooth.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/smooth/discrete_points_math.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/smooth/discretized_points_smoothing/fem_pos_deviation_ipopt_interface.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/smooth/discretized_points_smoothing/fem_pos_deviation_smoother.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/smooth/gradient_descent_smoothing/gradient_descent_smoothing.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/ReferenceLineSmoothing.dir/source/trans/trans_data.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/ReferenceLineSmoothing" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/ReferenceLineSmoothing.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/TestIpopt.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/gradient_descent/bucketedqueue.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/gradient_descent/constants.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/gradient_descent/dynamicvoronoi.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/gradient_descent/helper.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/gradient_descent/node2d.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/gradient_descent/node3d.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/gradient_descent/point.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/gradient_descent/vector2d.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/math/linear_interpolation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/common/math/vec2d.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/config/fem_pos_deviation_smoother_config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/config/reference_line_smoother_config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/cubic_spline/cubic_spline.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/matplotlib_cpp/matplotlib_cpp.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/proto/pnc_point.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/reference_line/discrete_points_reference_line_smoother.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/reference_line/reference_line.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/reference_line/reference_line_provider.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/reference_line/reference_line_smoother.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/reference_line/reference_point.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/smooth/discrete_points_math.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/smooth/discretized_points_smooth/fem_pos_deviation_ipopt_interface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/smooth/discretized_points_smooth/fem_pos_deviation_osqp_interface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/smooth/discretized_points_smooth/fem_pos_deviation_smoother.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/smooth/gradient_descent_smooth/gradient_descent_smoothing.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/include/trans/trans_data.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/common/gradient_descent/bucketedqueue.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/common/gradient_descent/dynamicvoronoi.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/common/gradient_descent/node2d.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/common/gradient_descent/node3d.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/common/math/linear_interpolation.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/common/math/vec2d.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/reference_line/discrete_points_reference_line_smoother.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/reference_line/reference_line.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/reference_line/reference_line_provider.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/reference_line_smooth.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/smooth/discrete_points_math.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/smooth/discretized_points_smoothing/fem_pos_deviation_ipopt_interface.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/smooth/discretized_points_smoothing/fem_pos_deviation_smoother.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/smooth/gradient_descent_smoothing/gradient_descent_smoothing.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceLineSmooth/source/trans/trans_data.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/discrete_point_smoothing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/discrete_point_smoothing.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ins_Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ins_Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discrete_point_smoothing.dir/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/discrete_point_smoothing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/discrete_point_smoothing" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/discrete_point_smoothing.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/discrete_point_smoothing.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/config/fem_pos_deviation_smoother_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/config/fem_pos_deviation_smoother_config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/config/reference_line_smoother_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/config/reference_line_smoother_config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smoother.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smoother.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/discrete_point_smoothing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/discrete_point_smoothing.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smoother.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smoother.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/Ins_Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/Ins_Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/smooth_spline/spline_2d_solver.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/smooth_spline/spline_2d_solver.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/trans/trans_data.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/qp_spline_smoothing" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/cmake-build-debug/qp_spline_smoothing" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/include/common/config/reference_line_config/smooth_reference_line_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/include/common/config/reference_line_config/smooth_reference_line_config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/include/common/smooth_line/discreted_points_smooth/discrete_points_math.h" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/include/common/smooth_line/discreted_points_smooth/discrete_points_math.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/include/reference_line/discrete_points_reference_line_smooth.h" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/include/reference_line/discrete_points_reference_line_smooth.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/include/reference_line/reference_line_provider.h" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/include/reference_line/reference_line_provider.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/include/trans/trans_data.h" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/include/trans/trans_data.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/source/qp_spline_smoothing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/source/qp_spline_smoothing.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/source/reference_line/reference_line_provider.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/source/reference_line/reference_line_provider.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qp_spline_smoothing/source/trans/trans_data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../qp_spline_smoothing/source/trans/trans_data.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -417,7 +75,44 @@
     <favorites_list name="ReferenceLineSmoothing" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/discrete_point_smoothing.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/config/reference_line_smoother_config.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#14#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/config/fem_pos_deviation_smoother_config.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="779">
+              <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+              <folding>
+                <element signature="e#101#394#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -442,6 +137,8 @@
       <find>FemPosSmooth</find>
       <find>ref_points_</find>
       <find>ReferenceLineSmoothing</find>
+      <find>weight_fem_pos_deviation_</find>
+      <find>smooth(</find>
     </findStrings>
     <replaceStrings>
       <replace>double</replace>
@@ -464,31 +161,33 @@
         <option value="$PROJECT_DIR$/source/reference_line/reference_line_provider.cpp" />
         <option value="$PROJECT_DIR$/include/smooth/discretized_points_smooth/fem_pos_deviation_smoother.h" />
         <option value="$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_ipopt_interface.cpp" />
-        <option value="$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp" />
         <option value="$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_smoother.cpp" />
         <option value="$PROJECT_DIR$/source/smooth/discrete_points_math.cpp" />
         <option value="$PROJECT_DIR$/source/common/gradient_descent/node2d.cpp" />
         <option value="$PROJECT_DIR$/include/trans/trans_data.h" />
         <option value="$PROJECT_DIR$/source/trans/trans_data.cpp" />
         <option value="$PROJECT_DIR$/include/reference_line/reference_line_smoother.h" />
-        <option value="$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smoother.h" />
         <option value="$PROJECT_DIR$/source/reference_line_smooth.cpp" />
-        <option value="$PROJECT_DIR$/include/config/fem_pos_deviation_smoother_config.h" />
         <option value="$PROJECT_DIR$/include/common/gradient_descent/constants.h" />
         <option value="$PROJECT_DIR$/source/smooth/gradient_descent_smoothing/gradient_descent_smoothing.cpp" />
-        <option value="$PROJECT_DIR$/include/config/reference_line_smoother_config.h" />
         <option value="$PROJECT_DIR$/include/smooth/gradient_descent_smooth/gradient_descent_smoothing.h" />
-        <option value="$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smoother.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/config/fem_pos_deviation_smoother_config.h" />
+        <option value="$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smoother.h" />
+        <option value="$PROJECT_DIR$/include/config/reference_line_smoother_config.h" />
+        <option value="$PROJECT_DIR$/source/discrete_point_smoothing.cpp" />
+        <option value="$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smoother.cpp" />
+        <option value="$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp" />
+        <option value="$PROJECT_DIR$/Ins_Data.txt" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="3" />
-    <option name="width" value="1855" />
-    <option name="height" value="1077" />
+    <option name="x" value="1969" />
+    <option name="y" value="-10" />
+    <option name="width" value="1317" />
+    <option name="height" value="778" />
   </component>
   <component name="ProjectId" id="1PxPQoBPe4aSncnbjGIHSikRBkt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -497,6 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -504,11 +204,57 @@
               <item name="discrete_point_smoothing" type="b2602c69:ProjectViewProjectNode" />
               <item name="discrete_point_smoothing" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="discrete_point_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="discrete_point_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="3rd_party" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="discrete_point_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="discrete_point_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="discrete_point_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="discrete_point_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="discrete_point_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="discrete_point_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="smooth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="discrete_point_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="discrete_point_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="smooth" type="462c0819:PsiDirectoryNode" />
+              <item name="discretized_points_smooth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="discrete_point_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="discrete_point_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="discrete_point_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="discrete_point_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="smooth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="discrete_point_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="discrete_point_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="smooth" type="462c0819:PsiDirectoryNode" />
+              <item name="discretized_points_smoothing" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -638,11 +384,17 @@
       <workItem from="1572170115139" duration="1867000" />
       <workItem from="1572224859905" duration="3699000" />
       <workItem from="1572244416073" duration="272000" />
+      <workItem from="1572245190470" duration="52000" />
+      <workItem from="1572245824796" duration="1410000" />
+      <workItem from="1572309982185" duration="1677000" />
+      <workItem from="1572326811748" duration="20622000" />
+      <workItem from="1572353362031" duration="11048000" />
+      <workItem from="1573436579079" duration="64000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25936000" />
+    <option name="totallyTimeSpent" value="60809000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -654,24 +406,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="1969" y="-10" width="1317" height="778" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25179857" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09219858" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.112474434" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27300614" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.046511628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.047034767" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5777096" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2339979" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.4553102" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.4500526" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.35503876" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -701,13 +454,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Femos_osqp_ReferencePoints.txt" />
-    <entry file="file://$PROJECT_DIR$/include/cubic_spline/cubic_spline.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/common/gradient_descent/bucketedqueue.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -825,16 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/smooth/discrete_points_math.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding>
-            <element signature="e#14#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/common/gradient_descent/node2d.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -859,33 +595,6 @@
     <entry file="file://$PROJECT_DIR$/source/common/gradient_descent/node3d.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/trans/trans_data.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#14#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smoother.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-          <folding>
-            <element signature="e#14#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/proto/pnc_point.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/reference_line/reference_line_smoother.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -896,40 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/smooth/discretized_points_smooth/fem_pos_deviation_smoother.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <element signature="e#14#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ins_Data.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/config/fem_pos_deviation_smoother_config.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/common/gradient_descent/constants.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
           <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/config/reference_line_smoother_config.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-          <folding>
-            <element signature="e#14#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -939,23 +618,6 @@
           <caret line="14" column="21" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="e#14#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/smooth/discrete_points_math.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2233">
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/reference_line_smooth.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -977,13 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_ipopt_interface.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/3rd_party/osqp/include/osqp/cs.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -994,63 +649,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smoother.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="535" lean-forward="true" selection-start-line="535" selection-end-line="535" />
-          <folding>
-            <element signature="e#1#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/trans/trans_data.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/smooth/gradient_descent_smoothing/gradient_descent_smoothing.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="50" lean-forward="true" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_smoother.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1919">
-          <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/smooth/discretized_points_smooth/fem_pos_deviation_osqp_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <element signature="e#14#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5244">
-          <caret line="276" column="11" selection-start-line="276" selection-start-column="11" selection-end-line="276" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-            <element signature="e#3428#7673#0" />
-            <element signature="e#7675#8083#0" />
-            <element signature="e#9071#9404#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1064,10 +666,180 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/include/trans/trans_data.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#14#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/smooth/discretized_points_smooth/fem_pos_deviation_smoother.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="e#14#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/trans/trans_data.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/cubic_spline/cubic_spline.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_ipopt_interface.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_smoother.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1166">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/proto/pnc_point.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smoother.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="e#14#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="37" selection-start-line="37" selection-end-line="40" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/smooth/discrete_points_math.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding>
+            <element signature="e#14#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/smooth/discrete_points_math.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="92" column="50" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smoother.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2092">
+          <caret line="298" column="33" selection-start-line="298" selection-start-column="33" selection-end-line="298" selection-end-column="33" />
+          <folding>
+            <element signature="e#1#68#0" expanded="true" />
+            <element signature="e#4268#5322#0" />
+            <element signature="e#8927#9583#0" />
+            <element signature="e#9585#10130#0" />
+            <element signature="e#11358#12102#0" />
+            <element signature="e#12104#12807#0" />
+            <element signature="e#12809#13410#0" />
+            <element signature="e#13412#14402#0" />
+            <element signature="e#14404#15549#0" />
+            <element signature="e#15551#16502#0" />
+            <element signature="e#16504#18102#0" />
+            <element signature="e#18104#18488#0" />
+            <element signature="e#18490#19747#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ins_Data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="2990" selection-start-line="2990" selection-end-line="2990" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/smooth/discretized_points_smooth/fem_pos_deviation_osqp_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="101" column="27" lean-forward="true" selection-start-line="101" selection-start-column="27" selection-end-line="101" selection-end-column="27" />
+          <folding>
+            <element signature="e#14#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/config/fem_pos_deviation_smoother_config.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+          <folding>
+            <element signature="e#101#394#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/config/reference_line_smoother_config.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#14#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/discrete_point_smoothing.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

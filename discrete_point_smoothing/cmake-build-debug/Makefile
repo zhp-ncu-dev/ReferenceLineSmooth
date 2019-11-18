@@ -285,6 +285,33 @@ source/common/math/vec2d.cpp.s:
 	$(MAKE) -f CMakeFiles/discrete_point_smoothing.dir/build.make CMakeFiles/discrete_point_smoothing.dir/source/common/math/vec2d.cpp.s
 .PHONY : source/common/math/vec2d.cpp.s
 
+source/discrete_point_smoothing.o: source/discrete_point_smoothing.cpp.o
+
+.PHONY : source/discrete_point_smoothing.o
+
+# target to build an object file
+source/discrete_point_smoothing.cpp.o:
+	$(MAKE) -f CMakeFiles/discrete_point_smoothing.dir/build.make CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.o
+.PHONY : source/discrete_point_smoothing.cpp.o
+
+source/discrete_point_smoothing.i: source/discrete_point_smoothing.cpp.i
+
+.PHONY : source/discrete_point_smoothing.i
+
+# target to preprocess a source file
+source/discrete_point_smoothing.cpp.i:
+	$(MAKE) -f CMakeFiles/discrete_point_smoothing.dir/build.make CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.i
+.PHONY : source/discrete_point_smoothing.cpp.i
+
+source/discrete_point_smoothing.s: source/discrete_point_smoothing.cpp.s
+
+.PHONY : source/discrete_point_smoothing.s
+
+# target to generate assembly for a file
+source/discrete_point_smoothing.cpp.s:
+	$(MAKE) -f CMakeFiles/discrete_point_smoothing.dir/build.make CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.s
+.PHONY : source/discrete_point_smoothing.cpp.s
+
 source/reference_line/discrete_points_reference_line_smoother.o: source/reference_line/discrete_points_reference_line_smoother.cpp.o
 
 .PHONY : source/reference_line/discrete_points_reference_line_smoother.o
@@ -365,33 +392,6 @@ source/reference_line/reference_line_provider.s: source/reference_line/reference
 source/reference_line/reference_line_provider.cpp.s:
 	$(MAKE) -f CMakeFiles/discrete_point_smoothing.dir/build.make CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.s
 .PHONY : source/reference_line/reference_line_provider.cpp.s
-
-source/reference_line_smooth.o: source/reference_line_smooth.cpp.o
-
-.PHONY : source/reference_line_smooth.o
-
-# target to build an object file
-source/reference_line_smooth.cpp.o:
-	$(MAKE) -f CMakeFiles/discrete_point_smoothing.dir/build.make CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o
-.PHONY : source/reference_line_smooth.cpp.o
-
-source/reference_line_smooth.i: source/reference_line_smooth.cpp.i
-
-.PHONY : source/reference_line_smooth.i
-
-# target to preprocess a source file
-source/reference_line_smooth.cpp.i:
-	$(MAKE) -f CMakeFiles/discrete_point_smoothing.dir/build.make CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.i
-.PHONY : source/reference_line_smooth.cpp.i
-
-source/reference_line_smooth.s: source/reference_line_smooth.cpp.s
-
-.PHONY : source/reference_line_smooth.s
-
-# target to generate assembly for a file
-source/reference_line_smooth.cpp.s:
-	$(MAKE) -f CMakeFiles/discrete_point_smoothing.dir/build.make CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.s
-.PHONY : source/reference_line_smooth.cpp.s
 
 source/smooth/discrete_points_math.o: source/smooth/discrete_points_math.cpp.o
 
@@ -582,6 +582,9 @@ help:
 	@echo "... source/common/math/vec2d.o"
 	@echo "... source/common/math/vec2d.i"
 	@echo "... source/common/math/vec2d.s"
+	@echo "... source/discrete_point_smoothing.o"
+	@echo "... source/discrete_point_smoothing.i"
+	@echo "... source/discrete_point_smoothing.s"
 	@echo "... source/reference_line/discrete_points_reference_line_smoother.o"
 	@echo "... source/reference_line/discrete_points_reference_line_smoother.i"
 	@echo "... source/reference_line/discrete_points_reference_line_smoother.s"
@@ -591,9 +594,6 @@ help:
 	@echo "... source/reference_line/reference_line_provider.o"
 	@echo "... source/reference_line/reference_line_provider.i"
 	@echo "... source/reference_line/reference_line_provider.s"
-	@echo "... source/reference_line_smooth.o"
-	@echo "... source/reference_line_smooth.i"
-	@echo "... source/reference_line_smooth.s"
 	@echo "... source/smooth/discrete_points_math.o"
 	@echo "... source/smooth/discrete_points_math.i"
 	@echo "... source/smooth/discrete_points_math.s"

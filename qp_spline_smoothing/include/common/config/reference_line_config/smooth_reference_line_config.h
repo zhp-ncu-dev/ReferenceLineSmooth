@@ -6,7 +6,7 @@
 #define PLANNING_SMOOTH_REFERENCE_LINE_CONFIG_H
 
 #include <stdint-gcc.h>
-
+#include <math.h>
 namespace planning
 {
     #define FLAGS_longitudinal_boundary_bound 1
@@ -33,7 +33,7 @@ namespace planning
     #define FLAGS_smooth_line_default_active_set_eps_iter_ref 1e-6
     #define FLAGS_smooth_line_default_active_set_eps_den 1e-6
     #define FLAGS_enable_sqp_solver true
-    #define FLAGS_default_qp_iteration_num 10000
+    #define FLAGS_default_qp_iteration_num 100000
     #define FLAGS_default_enable_active_set_debug_info false
 
     const double FLAGS_smoothLongDisTime = 6.0;
@@ -48,8 +48,13 @@ namespace planning
     struct FemPosDeviationSmootherConfig
     {
         double maxConstraintInterval;
+        float uTurnConstrainInterval;
+        float sampleRoadInterval;
+        float threshold;
         double longitudinalBoundaryBound;
         double lateralBoundaryBound;
+        double uTurnLongitudinalBoundaryBound;
+        double uTurnLateralBoundaryBound;
         double weightFemPosDeviation;
         double weightRefDeviation;
         double weightPathLength;
@@ -58,19 +63,36 @@ namespace planning
         bool verbose;
         bool scaledTermination;
         bool warmStart;
+        double weightCurvatureConstraintSlackVar;
+        double curvatureConstraint;
+        int32_t sqpSubMaxIter;
+        double sqpFtol;
+        int32_t sqpPenMaxIter;
+        double sqpCtol;
 
         FemPosDeviationSmootherConfig() :
-        maxConstraintInterval(0.5),
+        maxConstraintInterval(1.0),
+        uTurnConstrainInterval(0.2),
+        sampleRoadInterval(1.0),
+        threshold(5.0),
         longitudinalBoundaryBound(0.25),
         lateralBoundaryBound(0.25),
+        uTurnLongitudinalBoundaryBound(1.0e-2),
+        uTurnLateralBoundaryBound(1.0e-2),
         weightFemPosDeviation(1.0e5),
         weightRefDeviation(1.0),
         weightPathLength(1.0),
-        maxIter(500000),
+        maxIter(10000),
         timeLimit(0.0),
         verbose(false),
         scaledTermination(true),
-        warmStart(true)
+        warmStart(true),
+        weightCurvatureConstraintSlackVar(1.0e2),
+        curvatureConstraint(0.2),
+        sqpFtol(1.0e-4),
+        sqpCtol(1.0e-3),
+        sqpPenMaxIter(10),
+        sqpSubMaxIter(100)
         {}
     };
 }

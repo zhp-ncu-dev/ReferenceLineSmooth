@@ -13,6 +13,7 @@ namespace planning
         double x;
         double y;
         double heading;
+        int type;
         double s;
         double z;
     };
@@ -22,6 +23,29 @@ namespace planning
         double x;
         double y;
         double heading;
+        int type;
+    };
+
+    struct TestInsData
+    {
+        double x;
+        double y;
+        double heading;
+        TestInsData(double a, double b, double c) :
+                x(a), y(b), heading(c)
+        {}
+    };
+
+    struct TestFrame
+    {
+        double x;
+        double y;
+        double height;
+        double heading;
+        double speed;
+        double roll;
+        double pitch;
+        double acc;
     };
 
     struct dPoint
@@ -38,14 +62,20 @@ namespace planning
 
         bool createReferenceLine(ReferenceLine &referenceLine);
 
+        void createPathGuass(const std::vector<ReferencePoint> &referencePoints);
+
     private:
         bool ImportData(std::vector<GaussData>& raw_reference_line);
 
         bool ImportInsData(std::vector<InsData>& insdata);
 
+        bool ImportTestFrameData(std::vector<planning::TestInsData> &insData);
+
         dPoint GaussProjCal(const dPoint bol);
+
         bool SpareReferenceLine(std::vector<GaussData> &raw_reference_line,
                                 std::vector<GaussData> &spare_ference_line);
 
+        int getLaneDefineType(int type);
     };
 }

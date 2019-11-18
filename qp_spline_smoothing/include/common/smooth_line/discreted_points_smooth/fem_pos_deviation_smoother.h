@@ -19,6 +19,9 @@ namespace planning
                            const std::vector<double>& bounds,
                            std::vector<double>* opt_x, std::vector<double>* opt_y);
 
+        bool SqpWithOsqp(const std::vector<std::pair<double, double>>& raw_point2d,
+                         const std::vector<double>& bounds,
+                         std::vector<double>* opt_x, std::vector<double>* opt_y);
     private:
         FemPosDeviationSmootherConfig m_femPosDeviationSmootherConfig;
     };

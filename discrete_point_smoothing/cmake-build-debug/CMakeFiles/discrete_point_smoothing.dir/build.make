@@ -135,9 +135,22 @@ CMakeFiles/discrete_point_smoothing.dir/source/common/math/vec2d.cpp.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/discrete_point_smoothing.dir/source/common/math/vec2d.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/common/math/vec2d.cpp -o CMakeFiles/discrete_point_smoothing.dir/source/common/math/vec2d.cpp.s
 
+CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.o: CMakeFiles/discrete_point_smoothing.dir/flags.make
+CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.o: ../source/discrete_point_smoothing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/discrete_point_smoothing.cpp
+
+CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/discrete_point_smoothing.cpp > CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.i
+
+CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/discrete_point_smoothing.cpp -o CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.s
+
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o: CMakeFiles/discrete_point_smoothing.dir/flags.make
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o: ../source/reference_line/discrete_points_reference_line_smoother.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/discrete_points_reference_line_smoother.cpp
 
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_re
 
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.o: CMakeFiles/discrete_point_smoothing.dir/flags.make
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.o: ../source/reference_line/reference_line.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/reference_line.cpp
 
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp
 
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: CMakeFiles/discrete_point_smoothing.dir/flags.make
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.o: ../source/reference_line/reference_line_provider.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/reference_line_provider.cpp
 
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.i: cmake_force
@@ -173,19 +186,6 @@ CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_pro
 CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/reference_line_provider.cpp -o CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.s
-
-CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o: CMakeFiles/discrete_point_smoothing.dir/flags.make
-CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o: ../source/reference_line_smooth.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o -c /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line_smooth.cpp
-
-CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line_smooth.cpp > CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.i
-
-CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line_smooth.cpp -o CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.s
 
 CMakeFiles/discrete_point_smoothing.dir/source/smooth/discrete_points_math.cpp.o: CMakeFiles/discrete_point_smoothing.dir/flags.make
 CMakeFiles/discrete_point_smoothing.dir/source/smooth/discrete_points_math.cpp.o: ../source/smooth/discrete_points_math.cpp
@@ -273,10 +273,10 @@ discrete_point_smoothing_OBJECTS = \
 "CMakeFiles/discrete_point_smoothing.dir/source/common/gradient_descent/node3d.cpp.o" \
 "CMakeFiles/discrete_point_smoothing.dir/source/common/math/linear_interpolation.cpp.o" \
 "CMakeFiles/discrete_point_smoothing.dir/source/common/math/vec2d.cpp.o" \
+"CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.o" \
 "CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o" \
 "CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.o" \
 "CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.o" \
-"CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o" \
 "CMakeFiles/discrete_point_smoothing.dir/source/smooth/discrete_points_math.cpp.o" \
 "CMakeFiles/discrete_point_smoothing.dir/source/smooth/discretized_points_smoothing/fem_pos_deviation_ipopt_interface.cpp.o" \
 "CMakeFiles/discrete_point_smoothing.dir/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp.o" \
@@ -293,10 +293,10 @@ discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/common/
 discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/common/gradient_descent/node3d.cpp.o
 discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/common/math/linear_interpolation.cpp.o
 discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/common/math/vec2d.cpp.o
+discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.o
 discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o
 discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.o
 discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.o
-discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o
 discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/smooth/discrete_points_math.cpp.o
 discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/smooth/discretized_points_smoothing/fem_pos_deviation_ipopt_interface.cpp.o
 discrete_point_smoothing: CMakeFiles/discrete_point_smoothing.dir/source/smooth/discretized_points_smoothing/fem_pos_deviation_osqp_interface.cpp.o

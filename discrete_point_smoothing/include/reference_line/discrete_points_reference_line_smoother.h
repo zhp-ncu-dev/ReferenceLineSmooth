@@ -29,9 +29,16 @@ public:
 
     void SetAnchorPoints(const std::vector<AnchorPoint>&) override;
 
-    void SetAnchorPoints(const std::vector<GaussData>& sparepoint,const std::vector<GaussData> &reference_points_) ;
+    void SetAnchorPoints(
+            const std::vector<GaussData>& sparepoint,
+            const std::vector<GaussData> &reference_points_) ;
 
 private:
+
+    bool curveInterpolate(
+            const std::vector<std::pair<double, double>> &discretePoint2d,
+            std::vector<std::pair<double, double>> &smoothedPoint2d);
+
     bool FemPosSmooth(
             const std::vector<std::pair<double, double>>& raw_point2d,
             const std::vector<double>& bounds,
@@ -82,8 +89,6 @@ private:
     std::vector<double> accumulated_s_path_;
     std::vector<common::math::Vec2d> unit_directions_;
     double length_ = 0.0;
-
-
 };
 
 }  // namespace planning

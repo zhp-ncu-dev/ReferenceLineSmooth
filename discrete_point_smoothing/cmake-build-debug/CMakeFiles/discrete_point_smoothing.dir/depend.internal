@@ -25,47 +25,7 @@ CMakeFiles/discrete_point_smoothing.dir/source/common/math/linear_interpolation.
 CMakeFiles/discrete_point_smoothing.dir/source/common/math/vec2d.cpp.o
  ../include/common/math/vec2d.h
  /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/common/math/vec2d.cpp
-CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o
- ../include/common/gradient_descent/bucketedqueue.h
- ../include/common/gradient_descent/constants.h
- ../include/common/gradient_descent/dynamicvoronoi.h
- ../include/common/gradient_descent/helper.h
- ../include/common/gradient_descent/node3d.h
- ../include/common/gradient_descent/point.h
- ../include/common/gradient_descent/vector2d.h
- ../include/common/math/linear_interpolation.h
- ../include/common/math/vec2d.h
- ../include/config/fem_pos_deviation_smoother_config.h
- ../include/config/reference_line_smoother_config.h
- ../include/proto/pnc_point.h
- ../include/reference_line/discrete_points_reference_line_smoother.h
- ../include/reference_line/reference_line.h
- ../include/reference_line/reference_line_smoother.h
- ../include/reference_line/reference_point.h
- ../include/smooth/discrete_points_math.h
- ../include/smooth/discretized_points_smooth/fem_pos_deviation_smoother.h
- ../include/smooth/gradient_descent_smooth/gradient_descent_smoothing.h
- ../include/trans/trans_data.h
- /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/discrete_points_reference_line_smoother.cpp
-CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.o
- ../include/common/math/vec2d.h
- ../include/config/fem_pos_deviation_smoother_config.h
- ../include/config/reference_line_smoother_config.h
- ../include/proto/pnc_point.h
- ../include/reference_line/reference_line.h
- ../include/reference_line/reference_point.h
- /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/reference_line.cpp
-CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.o
- ../include/common/math/vec2d.h
- ../include/config/fem_pos_deviation_smoother_config.h
- ../include/config/reference_line_smoother_config.h
- ../include/proto/pnc_point.h
- ../include/reference_line/reference_line.h
- ../include/reference_line/reference_line_provider.h
- ../include/reference_line/reference_line_smoother.h
- ../include/reference_line/reference_point.h
- /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/reference_line_provider.cpp
-CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o
+CMakeFiles/discrete_point_smoothing.dir/source/discrete_point_smoothing.cpp.o
  ../3rd_party/colpack/include/ColPack/BipartiteGraphBicoloring.h
  ../3rd_party/colpack/include/ColPack/BipartiteGraphBicoloringInterface.h
  ../3rd_party/colpack/include/ColPack/BipartiteGraphCore.h
@@ -107,7 +67,7 @@ CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o
  ../include/reference_line/reference_line_smoother.h
  ../include/reference_line/reference_point.h
  ../include/trans/trans_data.h
- /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line_smooth.cpp
+ /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/discrete_point_smoothing.cpp
  /usr/include/python2.7/Python.h
  /usr/include/python2.7/abstract.h
  /usr/include/python2.7/boolobject.h
@@ -184,6 +144,47 @@ CMakeFiles/discrete_point_smoothing.dir/source/reference_line_smooth.cpp.o
  /usr/include/python2.7/unicodeobject.h
  /usr/include/python2.7/warnings.h
  /usr/include/python2.7/weakrefobject.h
+CMakeFiles/discrete_point_smoothing.dir/source/reference_line/discrete_points_reference_line_smoother.cpp.o
+ ../include/common/gradient_descent/bucketedqueue.h
+ ../include/common/gradient_descent/constants.h
+ ../include/common/gradient_descent/dynamicvoronoi.h
+ ../include/common/gradient_descent/helper.h
+ ../include/common/gradient_descent/node3d.h
+ ../include/common/gradient_descent/point.h
+ ../include/common/gradient_descent/vector2d.h
+ ../include/common/math/linear_interpolation.h
+ ../include/common/math/vec2d.h
+ ../include/config/fem_pos_deviation_smoother_config.h
+ ../include/config/reference_line_smoother_config.h
+ ../include/cubic_spline/cubic_spline.h
+ ../include/proto/pnc_point.h
+ ../include/reference_line/discrete_points_reference_line_smoother.h
+ ../include/reference_line/reference_line.h
+ ../include/reference_line/reference_line_smoother.h
+ ../include/reference_line/reference_point.h
+ ../include/smooth/discrete_points_math.h
+ ../include/smooth/discretized_points_smooth/fem_pos_deviation_smoother.h
+ ../include/smooth/gradient_descent_smooth/gradient_descent_smoothing.h
+ ../include/trans/trans_data.h
+ /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/discrete_points_reference_line_smoother.cpp
+CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line.cpp.o
+ ../include/common/math/vec2d.h
+ ../include/config/fem_pos_deviation_smoother_config.h
+ ../include/config/reference_line_smoother_config.h
+ ../include/proto/pnc_point.h
+ ../include/reference_line/reference_line.h
+ ../include/reference_line/reference_point.h
+ /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/reference_line.cpp
+CMakeFiles/discrete_point_smoothing.dir/source/reference_line/reference_line_provider.cpp.o
+ ../include/common/math/vec2d.h
+ ../include/config/fem_pos_deviation_smoother_config.h
+ ../include/config/reference_line_smoother_config.h
+ ../include/proto/pnc_point.h
+ ../include/reference_line/reference_line.h
+ ../include/reference_line/reference_line_provider.h
+ ../include/reference_line/reference_line_smoother.h
+ ../include/reference_line/reference_point.h
+ /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/reference_line_provider.cpp
 CMakeFiles/discrete_point_smoothing.dir/source/smooth/discrete_points_math.cpp.o
  ../include/smooth/discrete_points_math.h
  /home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/smooth/discrete_points_math.cpp

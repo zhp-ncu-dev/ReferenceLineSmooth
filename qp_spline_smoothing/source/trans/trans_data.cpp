@@ -10,6 +10,24 @@
 
 namespace planning
 {
+    void TransData::createPathGuass(
+            const std::vector<planning::ReferencePoint> &referencePoints)
+    {
+        FILE *fpWrite = fopen("/home/zhp/桌面/SmoothTest/smoothedReferenceLine.txt", "w");
+        if(fpWrite == NULL)
+        {
+            exit(1);
+        }
+
+        for(const auto point : referencePoints)
+        {
+            fprintf(fpWrite, "%.3f %.3f %.2f %.2f %.2f %.2f %.2f %.2f\r\n",
+                    point.pointInfo().x(), point.pointInfo().y(), 0.0, radianToDegree(point.pointInfo().heading()),
+                    0.0, 0.0, 0.0, 0.0);
+        }
+        fclose(fpWrite);
+    }
+
     bool TransData::createReferenceLine(
             planning::ReferenceLine &referenceLine)
     {
@@ -22,25 +40,26 @@ namespace planning
         std::vector<double> accumulateS;
         for (const GaussData &referencePoint : raw_reference_line)
         {
-//            if(referencePoint.s > 200.0)
+//            if(referencePoint.s > 400.0)
 //            {
 //                break;
 //            }
             had_map::MapPoint mapPoint(
                     math::Vec2d{referencePoint.x, referencePoint.y},
-                    degreeToRadian(referencePoint.heading));
+                    degreeToRadian(referencePoint.heading), referencePoint.type);
             ReferencePoint point(mapPoint, laneWidth/2.0, laneWidth/2.0);
             accumulateS.emplace_back(referencePoint.s);
             referencePoints.emplace_back(point);
         }
         ReferenceLine line(referencePoints, accumulateS);
         referenceLine = line;
+
+        return true;
     }
 
     bool TransData::ImportData(std::vector<GaussData>& raw_reference_line )
     {
         std::vector<InsData> Ins_Data;
-
         if(ImportInsData(Ins_Data))
         {
             std::cout << "Import Ins_Data success" << std::endl ;
@@ -60,10 +79,54 @@ namespace planning
         {
             Bol.x = Ins_Data[i].x/100000000.0;
             Bol.y = Ins_Data[i].y/100000000.0;
+
             Col = GaussProjCal(Bol);
             InputData.index = i;
             InputData.x = Col.x;
             InputData.y = Col.y;
+            InputData.heading = Ins_Data[i].heading;
+            InputData.type = getLaneDefineType(Ins_Data[i].type);
+
+            if(i == 0)
+            {
+                InputData.s = 0.000;
+            }
+            else
+            {
+                sumS += sqrt((InputData.x - raw_reference_line[i-1].x) *
+                             (InputData.x - raw_reference_line[i-1].x) +
+                             (InputData.y - raw_reference_line[i-1].y) *
+                             (InputData.y - raw_reference_line[i-1].y));
+                InputData.s = sumS;
+            }
+
+            InputData.z = 0.000;
+            raw_reference_line.emplace_back(InputData);
+        }
+
+/*
+        std::vector<TestInsData> Ins_Data;
+        if(ImportTestFrameData(Ins_Data))
+        {
+            std::cout << "Import Ins_Data success" << std::endl ;
+        }
+        else
+        {
+            std::cout << "Import Ins_Data fail" << std::endl ;
+            return false;
+        }
+
+        uint16_t iNum = Ins_Data.size();
+        GaussData InputData;
+        dPoint Bol;
+        dPoint Col;
+        double sumS = 0.0;
+        for(uint16_t i = 0; i < iNum; ++i)
+        {
+
+            InputData.index = i;
+            InputData.x = Ins_Data[i].x;
+            InputData.y = Ins_Data[i].y;
             InputData.heading = Ins_Data[i].heading;
 
             if(i == 0)
@@ -82,15 +145,13 @@ namespace planning
             InputData.z = 0.000;
             raw_reference_line.emplace_back(InputData);
         }
-
+*/
         return true;
     }
 
     bool TransData::ImportInsData(std::vector<InsData>& insdata)
     {
-
         InsData tempFrame;
-
         FILE* fp = fopen("../Ins_Data.txt","r+");
         if(fp == NULL)
         {
@@ -98,16 +159,42 @@ namespace planning
             exit(1);
         }
 
-        // TODO:
-        // 1.消除 txt 中的 "," 的影响 (vs_code 直接查找替换)
-        // 2.补充 z 坐标值
         while(!feof(fp))
         {
 
-            fscanf(fp,"%lf,%lf,%lf\r\n",&tempFrame.x,&tempFrame.y,&tempFrame.heading);
+            fscanf(fp,"%lf,%lf,%lf,%d\r\n",&tempFrame.x,&tempFrame.y,&tempFrame.heading,&tempFrame.type);
             insdata.push_back(tempFrame);
         }
-        std::cout << "load Ins_Data.txt success" << std::endl ;
+
+        std::cout << "load Ins_Data.txt success" << std::endl;
+
+        return true;
+    }
+
+    bool TransData::ImportTestFrameData(std::vector<planning::TestInsData> &insData)
+    {
+        TestFrame tempFrame;
+        std::vector<TestFrame> testData;
+        FILE* fp = fopen("/home/zhp/桌面/SmoothTest/path_gauss.txt","r+");
+        if(fp == NULL)
+        {
+            std::cout << "open file fail" << std::endl ;
+            exit(1);
+        }
+
+        while(!feof(fp))
+        {
+            fscanf(fp,"%lf %lf %lf %lf %lf %lf %lf %lf \r\n",
+                   &tempFrame.x, &tempFrame.y, &tempFrame.height, &tempFrame.heading,
+                   &tempFrame.speed, &tempFrame.roll, &tempFrame.pitch, &tempFrame.acc);
+            testData.push_back(tempFrame);
+        }
+
+        for(const auto point : testData)
+        {
+            TestInsData data(point.x, point.y, point.heading);
+            insData.emplace_back(data);
+        }
 
         return true;
     }
@@ -129,6 +216,58 @@ namespace planning
         xoy.y = y;
 
         return xoy;
+    }
+
+    int TransData::getLaneDefineType(int type)
+    {
+        if(type == 9)
+        {
+            return 16;
+        }
+        for (int i = 0; i < 24; ++i)
+        {
+            //平移24位
+            type = type>>1;
+        }
+        int id = 0;
+        for(int i = 0; i < 3;i++)
+        {
+            if((type & 0x00000001) == 1)
+            {
+                id += pow(2,i);
+            }
+            type = type>>1;
+        }
+        if(id != 0)
+        {
+            if(id == 4)
+            {
+                return 5;
+            }
+        }
+        id = 0;
+        for(int i = 0; i < 2;i++)
+        {
+            if((type & 0x00000001) == 1)
+            {
+                id += pow(2,i);
+            }
+            type = type>>1;
+        }
+        id = 0;
+        for(int i = 0; i < 3;i++)
+        {
+            if((type & 0x00000001) == 1)
+            {
+                id += pow(2,i);
+            }
+            type = type>>1;
+        }
+        if(id != 0)
+        {
+            return id;
+        }
+        return 0;
     }
 
 }

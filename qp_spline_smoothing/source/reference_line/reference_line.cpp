@@ -108,16 +108,53 @@ namespace planning
         }
 
         uint32_t index = getNearstPointLocation(s);
-        uint32_t next_index = index + 1;
-        if (next_index >= reference_points_.size()) {
-            next_index = reference_points_.size() - 1;
+        if(index == reference_points_.size() - 1)
+        {
+            index = reference_points_.size() - 2;
         }
+        uint32_t next_index = index + 1;
 
         const auto& p0 = reference_points_[index];
         const auto& p1 = reference_points_[next_index];
 
         const double s0 = accumulate_s_[index];
         const double s1 = accumulate_s_[next_index];
+
+        //std::cout << std::fixed << p0.pointInfo().x() << " " << p0.pointInfo().y() << " " <<
+        // p1.pointInfo().x() << " " <<  p1.pointInfo().y() << " " << s0 << " " << s1 << std::endl;
+
+        return interpolateLinearApproximation(p0, s0, p1, s1, s);
+    }
+
+    ReferencePoint ReferenceLine::getReferencePoint2(const double s) const
+    {
+        if (s < accumulate_s_.front() - 1e-2) {
+            return reference_points_.front();
+        }
+        if (s > accumulate_s_.back() + 1e-2) {
+            return reference_points_.back();
+        }
+
+        uint32_t index = getNearstPointLocation(s);
+        if(std::fabs(s - accumulate_s_[index]) < 0.1)
+        {
+            return reference_points_[index];
+        }
+        if(index == reference_points_.size() - 1)
+        {
+            index = reference_points_.size() - 2;
+        }
+        uint32_t next_index = index + 1;
+
+        const auto& p0 = reference_points_[index];
+        const auto& p1 = reference_points_[next_index];
+
+        const double s0 = accumulate_s_[index];
+        const double s1 = accumulate_s_[next_index];
+
+        //std::cout << std::fixed << p0.pointInfo().x() << " " << p0.pointInfo().y() << " " <<
+        // p1.pointInfo().x() << " " <<  p1.pointInfo().y() << " " << s0 << " " << s1 << std::endl;
+
         return interpolateLinearApproximation(p0, s0, p1, s1, s);
     }
 

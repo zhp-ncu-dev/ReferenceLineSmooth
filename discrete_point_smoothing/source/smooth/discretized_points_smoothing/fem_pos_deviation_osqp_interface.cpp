@@ -111,8 +111,7 @@ void FemPosDeviationOsqpInterface::CalculateKernel(
     //CHECK_GT(num_of_variables_, 4);
 
     // Three quadratic penalties are involved:
-    // 1. Penalty x on distance between middle point and point by finite element
-    // estimate;
+    // 1. Penalty x on distance between middle point and point by finite element estimate;
     // 2. Penalty y on path length;
     // 3. Penalty z on difference between points and reference points
 

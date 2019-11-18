@@ -33,6 +33,8 @@ namespace  planning
 
         ReferencePoint getReferencePoint(const double s) const;
 
+        ReferencePoint getReferencePoint2(const double s) const;
+
         ReferencePoint interpolateLinearApproximation(const ReferencePoint &p0,
                                                      const double s0,
                                                      const ReferencePoint &p1,

@@ -116,6 +116,9 @@
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/common/math/vec2d.cpp">
 			<Option target="discrete_point_smoothing"/>
 		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/discrete_point_smoothing.cpp">
+			<Option target="discrete_point_smoothing"/>
+		</Unit>
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/discrete_points_reference_line_smoother.cpp">
 			<Option target="discrete_point_smoothing"/>
 		</Unit>
@@ -123,9 +126,6 @@
 			<Option target="discrete_point_smoothing"/>
 		</Unit>
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line/reference_line_provider.cpp">
-			<Option target="discrete_point_smoothing"/>
-		</Unit>
-		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/reference_line_smooth.cpp">
 			<Option target="discrete_point_smoothing"/>
 		</Unit>
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/discrete_point_smoothing/source/smooth/discrete_points_math.cpp">

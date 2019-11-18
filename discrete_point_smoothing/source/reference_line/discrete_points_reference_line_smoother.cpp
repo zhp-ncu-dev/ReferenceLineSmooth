@@ -10,6 +10,7 @@
 #include "trans/trans_data.h"
 #include "common/math/linear_interpolation.h"
 #include "smooth/gradient_descent_smooth/gradient_descent_smoothing.h"
+#include "cubic_spline/cubic_spline.h"
 
 using namespace HybridAStar;
 
@@ -107,10 +108,12 @@ bool DiscretePointsReferenceLineSmoother::Smooth(
         std::cout << "discrete_points reference line smoother fails" << std::endl ;
         return false;
     }
+    std::vector<std::pair<double, double>> smoothedPoints2d;
+    curveInterpolate(smoothed_point2d, smoothedPoints2d);
 
-    DeNormalizePoints(&smoothed_point2d);
+    DeNormalizePoints(&smoothedPoints2d);
 
-    GenerateRefPointProfile(raw_reference_line,smoothed_point2d, ref_points);
+    GenerateRefPointProfile(raw_reference_line,smoothedPoints2d, ref_points);
 
     gettimeofday(&timeEnd,0);
     spendTime=(timeEnd.tv_sec-timeStart.tv_sec)*1000+(timeEnd.tv_usec-timeStart.tv_usec)/1000;
@@ -197,8 +200,10 @@ void DiscretePointsReferenceLineSmoother::SetAnchorPoints(
 }
 
 // 增加设置 sparepoint 接口
-void DiscretePointsReferenceLineSmoother::SetAnchorPoints(const std::vector<GaussData> &spare_ference_line,const std::vector<GaussData> &reference_points_) {
-
+void DiscretePointsReferenceLineSmoother::SetAnchorPoints(
+        const std::vector<GaussData> &spare_ference_line,
+        const std::vector<GaussData> &reference_points_)
+{
 // TODO:
 // 以 原始稀疏参考线，计算 heading , kappa , dkappa
 // Compute path profile
@@ -406,7 +411,6 @@ GaussData DiscretePointsReferenceLineSmoother::getNearstPoint(
     }
 }
 
-
 GaussData DiscretePointsReferenceLineSmoother::GetReferencePoint(
         const double s,
         const std::vector<ADC::planning::GaussData>& reference_line){
@@ -533,10 +537,42 @@ GaussData DiscretePointsReferenceLineSmoother::InterpolateWithMatchedIndex(
 
     // kappa dkappa 线性插值
 
+}
 
+bool DiscretePointsReferenceLineSmoother::curveInterpolate(
+        const std::vector<std::pair<double, double>> &discretePoint2d,
+        std::vector<std::pair<double, double>> &smoothedPoint2d)
+{
+    std::vector<double> accumulateS, x, y;
+    double disSum = 0.0;
+    for (size_t i = 0; i < discretePoint2d.size(); ++i)
+    {
+        if(i == 0)
+        {
+            accumulateS.emplace_back(disSum);
+        }
+        else
+        {
+            disSum += sqrt(
+                    (discretePoint2d[i].first - discretePoint2d[i-1].first) *
+                    (discretePoint2d[i].first - discretePoint2d[i-1].first) +
+                    (discretePoint2d[i].second - discretePoint2d[i-1].second) *
+                    (discretePoint2d[i].second - discretePoint2d[i-1].second));
+            accumulateS.emplace_back(disSum);
+        }
+        x.emplace_back(discretePoint2d[i].first);
+        y.emplace_back(discretePoint2d[i].second);
+    }
 
+    tk::spline cubicSX, cubicSY;
+    cubicSX.set_points(accumulateS, x);
+    cubicSY.set_points(accumulateS, y);
 
-
+    double totalS = accumulateS.back() - accumulateS.front();
+    for(double s = 0.0; s < totalS; s += 0.1)
+    {
+        smoothedPoint2d.emplace_back(std::make_pair(cubicSX(s), cubicSY(s)));
+    }
 }
 
 }  // namespace planning
