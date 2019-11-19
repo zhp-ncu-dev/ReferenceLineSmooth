@@ -50,7 +50,9 @@ namespace planning
         double maxConstraintInterval;
         float uTurnConstrainInterval;
         float sampleRoadInterval;
-        float threshold;
+        float threshold;                // uTurn长度阈值
+        float ordinaryRoadExtendLength; // 连接处往uTurn的拓展长度，需保证 2*ordinaryRoadExtendLength < threshold
+        float deltaS;                   // 连接处两个元素的间距
         double longitudinalBoundaryBound;
         double lateralBoundaryBound;
         double uTurnLongitudinalBoundaryBound;
@@ -74,7 +76,9 @@ namespace planning
         maxConstraintInterval(1.0),
         uTurnConstrainInterval(0.2),
         sampleRoadInterval(1.0),
-        threshold(5.0),
+        threshold(12.0),
+        ordinaryRoadExtendLength(3.0),
+        deltaS(0.1),
         longitudinalBoundaryBound(0.25),
         lateralBoundaryBound(0.25),
         uTurnLongitudinalBoundaryBound(1.0e-2),

@@ -17,6 +17,7 @@ int main0()
     using planning::ReferenceLineProvide;
     using planning::ReferencePoint;
     using had_map::MapPoint;
+    using planning::DiscretePointsMath;
 
     ReferenceLine referenceLine;
     TransData transData;
@@ -46,12 +47,29 @@ int main0()
     double zeroX = pointInfo.x();
     double zeroY = pointInfo.y();
     std::vector<double> originX, originY, originHeading;
+    std::vector<std::pair<double, double>> xyPoints;
     for(auto const & point : originPoints)
     {
         pointInfo = point.pointInfo();
         originX.emplace_back(pointInfo.x() - zeroX);
         originY.emplace_back(pointInfo.y() - zeroY);
         originHeading.emplace_back(radianToDegree(pointInfo.heading()));
+        xyPoints.emplace_back(pointInfo.x() - zeroX, pointInfo.y() - zeroY);
+    }
+    std::vector<double> headings, kappas, dkappas, acumulateS;
+    if(!DiscretePointsMath::ComputePathProfile(xyPoints, &headings, &acumulateS, &kappas, &dkappas))
+    {
+        std::cout << "原始参考线计算heading错误!" << std::endl;
+    }
+    for(size_t i = 0; i < headings.size(); ++i)
+    {
+        double angle = -headings[i] - degreeToRadian(90);
+        double a = std::fmod(angle + M_PI, 2.0 * M_PI);
+        if(a < 0.0)
+        {
+            a = a + 2.0 * M_PI;
+        }
+        headings[i] = radianToDegree(a);
     }
 
     std::vector<double> x, y, heading, kappa, dkappa;
@@ -77,7 +95,7 @@ int main0()
 
     plt::figure(2);
     plt::plot(s, heading, "r.");
-    plt::plot(originS, originHeading, "b-");
+    plt::plot(acumulateS, headings, "b.");
 
     plt::grid("True");
     //plt::axis("equal");

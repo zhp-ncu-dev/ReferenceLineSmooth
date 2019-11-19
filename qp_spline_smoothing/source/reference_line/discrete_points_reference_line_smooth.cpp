@@ -96,8 +96,8 @@ namespace planning
                         }
                         deNormalizePoints(&smoothedPoints2d);
                         std::vector<std::pair<double, double>> points;
-                        //curveInterpolate(smoothedPoints2d, points, deltaS);
-                        smoothedPoints2dVec.emplace_back(smoothedPoints2d);
+                        curveInterpolate(smoothedPoints2d, points, deltaS);
+                        smoothedPoints2dVec.emplace_back(points);
                     }
                     else
                     {
@@ -108,8 +108,8 @@ namespace planning
                         }
                         deNormalizePoints(&smoothedPoints2d);
                         std::vector<std::pair<double, double>> points;
-                        //curveInterpolate(smoothedPoints2d, points, deltaS);
-                        smoothedPoints2dVec.emplace_back(smoothedPoints2d);
+                        curveInterpolate(smoothedPoints2d, points, deltaS);
+                        smoothedPoints2dVec.emplace_back(points);
                     }
                 }
                 generateRefPointProfile(smoothedPoints2dVec, deltaS, smoothedReferenceLine);
@@ -301,6 +301,52 @@ namespace planning
             const double &deltaS,
             planning::ReferenceLine *const smoothedReferenceLine)
     {
+        /*
+        std::vector<std::pair<double, double>> allXYPoints;
+        for(const auto &xyPoints : smoothedPoints2dVec)
+        {
+            size_t num = xyPoints.size();
+            for(size_t i = 0; i < num; ++i)
+            {
+                allXYPoints.emplace_back(xyPoints[i]);
+            }
+        }
+
+        std::vector<double> headings;
+        std::vector<double> kappas;
+        std::vector<double> dkappas;
+        std::vector<double> accumulatedS;
+        if(!DiscretePointsMath::ComputePathProfile(
+                allXYPoints, &headings, &accumulatedS, &kappas, &dkappas))
+        {
+            return false;
+        }
+
+        // heading 转换:
+        // todo: 平滑后的 heading 与 原始值相差了 1°, 待解决
+        for(size_t i = 0; i < headings.size(); ++i)
+        {
+            double angle = -headings[i] - degreeToRadian(90);
+            double a = std::fmod(angle + M_PI, 2.0 * M_PI);
+            if(a < 0.0)
+            {
+                a = a + 2.0 * M_PI;
+            }
+            headings[i] = a;
+        }
+        std::vector<ReferencePoint> referencePoints;
+        size_t pointsSize = allXYPoints.size();
+        for(size_t i = 0; i < pointsSize; ++i)
+        {
+            had_map::MapPoint point_info(Vec2d{allXYPoints[i].first, allXYPoints[i].second}, headings[i]);
+            referencePoints.emplace_back(point_info, kappas[i], dkappas[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+        }
+
+        *smoothedReferenceLine = ReferenceLine(referencePoints, accumulatedS);
+
+        return true;
+*/
+
         std::vector<std::vector<std::pair<double, double>>> xyPointsVec;
         std::vector<std::vector<double>> headingsVec;
         std::vector<std::vector<double>> kappasVec;
@@ -354,14 +400,16 @@ namespace planning
                         dkappasVec[i].back(), dkappasVec[i+1].front(),
                         deltaS,
                         points, heading, kappa, dkappa);
-
-                size_t numPoints = points.size();
-                for(size_t k = 0; k < numPoints; ++k)
+                if(!points.empty())
                 {
-                    allXYPoints.emplace_back(points[k]);
-                    allHeadings.emplace_back(heading[k]);
-                    allKappas.emplace_back(kappa[k]);
-                    allDkappas.emplace_back(dkappa[k]);
+                    size_t numPoints = points.size();
+                    for(size_t k = 0; k < numPoints; ++k)
+                    {
+                        allXYPoints.emplace_back(points[k]);
+                        allHeadings.emplace_back(heading[k]);
+                        allKappas.emplace_back(kappa[k]);
+                        allDkappas.emplace_back(dkappa[k]);
+                    }
                 }
             }
         }
@@ -398,6 +446,7 @@ namespace planning
 
         *smoothedReferenceLine = ReferenceLine(referencePoints, allAccumulatedS);
         return true;
+
     }
 
 }// end namespace

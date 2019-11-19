@@ -94,7 +94,6 @@ namespace planning
     {
         std::vector<double> kappas;
         DiscretePointsMath::ComputeOriginalPathKappaProfile(raw_reference_line, &kappas);
-
         rawReferenceLineKappas = kappas;
     }
 
@@ -201,12 +200,12 @@ namespace planning
                distanceToEndPoint > config.threshold)
             {
                 samplePointS.startS = 0.0;
-                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].second];
+                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].second] - config.ordinaryRoadExtendLength;
                 samplePointS.step = config.uTurnConstrainInterval;
                 samplePointS.flag = true;
                 samplePointsS.emplace_back(samplePointS);
 
-                samplePointS.startS = accumulateS[uTurnStartEndIndexPair[0].second] + config.threshold;
+                samplePointS.startS = accumulateS[uTurnStartEndIndexPair[0].second] + config.deltaS;
                 samplePointS.endS = accumulateS.back();
                 samplePointS.step = config.maxConstraintInterval;
                 samplePointS.flag = false;
@@ -218,12 +217,12 @@ namespace planning
                distanceToEndPoint <= config.threshold)
             {
                 samplePointS.startS = 0.0;
-                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].first] - config.threshold;
+                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].first] + config.ordinaryRoadExtendLength;
                 samplePointS.step = config.maxConstraintInterval;
                 samplePointS.flag = false;
                 samplePointsS.emplace_back(samplePointS);
 
-                samplePointS.startS = accumulateS[uTurnStartEndIndexPair[0].first];
+                samplePointS.startS = accumulateS[uTurnStartEndIndexPair[0].first] + config.ordinaryRoadExtendLength + config.deltaS;
                 samplePointS.endS = accumulateS.back();
                 samplePointS.step = config.uTurnConstrainInterval;
                 samplePointS.flag = true;
@@ -235,18 +234,18 @@ namespace planning
                distanceToEndPoint > config.threshold)
             {
                 samplePointS.startS = 0.0;
-                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].first] - config.threshold;
+                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].first] + config.ordinaryRoadExtendLength;
                 samplePointS.step = config.maxConstraintInterval;
                 samplePointS.flag = false;
                 samplePointsS.emplace_back(samplePointS);
 
-                samplePointS.startS = accumulateS[uTurnStartEndIndexPair[0].first];
-                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].second];
+                samplePointS.startS = accumulateS[uTurnStartEndIndexPair[0].first]+ config.ordinaryRoadExtendLength + config.deltaS;
+                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].second] - config.ordinaryRoadExtendLength;
                 samplePointS.step = config.uTurnConstrainInterval;
                 samplePointS.flag = true;
                 samplePointsS.emplace_back(samplePointS);
 
-                samplePointS.startS = accumulateS[uTurnStartEndIndexPair[0].second] + config.threshold;
+                samplePointS.startS = accumulateS[uTurnStartEndIndexPair[0].second] - config.ordinaryRoadExtendLength + config.deltaS;
                 samplePointS.endS = accumulateS.back();
                 samplePointS.step = config.maxConstraintInterval;
                 samplePointS.flag = false;
@@ -273,15 +272,15 @@ namespace planning
                     }
                     else
                     {
-                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first];
+                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first] + config.ordinaryRoadExtendLength + config.deltaS;
                     }
-                    samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i].second];
+                    samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i].second] - config.ordinaryRoadExtendLength - config.deltaS;
                     samplePointS.step = config.uTurnConstrainInterval;
                     samplePointS.flag = true;
                     samplePointsS.emplace_back(samplePointS);
 
-                    samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].second] + config.threshold;
-                    samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i+1].first] - config.threshold;
+                    samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].second] - config.ordinaryRoadExtendLength;
+                    samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i+1].first] + config.ordinaryRoadExtendLength;
                     samplePointS.step = config.maxConstraintInterval;
                     samplePointS.flag = false;
                     samplePointsS.emplace_back(samplePointS);
@@ -291,7 +290,7 @@ namespace planning
                     // the last one is uTurn
                     if(distanceToEndPoint <= config.threshold)
                     {
-                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first];
+                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first] + config.ordinaryRoadExtendLength + config.deltaS;
                         samplePointS.endS = accumulateS.back();
                         samplePointS.step = config.uTurnConstrainInterval;
                         samplePointS.flag = true;
@@ -300,13 +299,13 @@ namespace planning
                     else
                     {
                         // 将最后一个uTurn加入，然后再加入后续非uTurn段
-                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first];
-                        samplePointS.endS = accumulateS[uTurnStartEndIndexPair.back().second];
+                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first] + config.ordinaryRoadExtendLength + config.deltaS;
+                        samplePointS.endS = accumulateS[uTurnStartEndIndexPair.back().second] - config.ordinaryRoadExtendLength - config.deltaS;
                         samplePointS.step = config.uTurnConstrainInterval;
                         samplePointS.flag = true;
                         samplePointsS.emplace_back(samplePointS);
 
-                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].second] + config.threshold;
+                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].second] - config.ordinaryRoadExtendLength;
                         samplePointS.endS = accumulateS.back();
                         samplePointS.step = config.maxConstraintInterval;
                         samplePointS.flag = false;
@@ -319,7 +318,7 @@ namespace planning
             if(distanceToStartPoint > config.threshold)
             {
                 samplePointS.startS = 0.0;
-                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].first] - config.threshold;
+                samplePointS.endS = accumulateS[uTurnStartEndIndexPair[0].first] + config.ordinaryRoadExtendLength;
                 samplePointS.step = config.maxConstraintInterval;
                 samplePointS.flag = false;
                 samplePointsS.emplace_back(samplePointS);
@@ -330,15 +329,15 @@ namespace planning
                 for(; i < num - 1; ++i)
                 {
                     // this is uTurn
-                    samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first];
-                    samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i].second];
+                    samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first] + config.ordinaryRoadExtendLength + config.deltaS;
+                    samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i].second] - config.ordinaryRoadExtendLength - config.deltaS;
                     samplePointS.step = config.uTurnConstrainInterval;
                     samplePointS.flag = true;
                     samplePointsS.emplace_back(samplePointS);
 
                     // this is not uTurn
-                    samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].second] + config.threshold;
-                    samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i+1].first] - config.threshold;
+                    samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].second] - config.ordinaryRoadExtendLength;
+                    samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i+1].first] + config.ordinaryRoadExtendLength;
                     samplePointS.step = config.maxConstraintInterval;
                     samplePointS.flag = false;
                     samplePointsS.emplace_back(samplePointS);
@@ -349,7 +348,7 @@ namespace planning
                     if(distanceToEndPoint <= config.threshold)
                     {
                         // is uTurn
-                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first];
+                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first] + config.ordinaryRoadExtendLength + config.deltaS;
                         samplePointS.endS = accumulateS.back();
                         samplePointS.step = config.uTurnConstrainInterval;
                         samplePointS.flag = true;
@@ -358,13 +357,13 @@ namespace planning
                     else
                     {
                         // is not uTurn
-                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first];
-                        samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i].second];
+                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].first] + config.ordinaryRoadExtendLength + config.deltaS;
+                        samplePointS.endS = accumulateS[uTurnStartEndIndexPair[i].second] - config.ordinaryRoadExtendLength - config.deltaS;
                         samplePointS.step = config.uTurnConstrainInterval;
                         samplePointS.flag = true;
                         samplePointsS.emplace_back(samplePointS);
 
-                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].second] + config.threshold;
+                        samplePointS.startS = accumulateS[uTurnStartEndIndexPair[i].second] - config.ordinaryRoadExtendLength;
                         samplePointS.endS = accumulateS.back();
                         samplePointS.step = config.maxConstraintInterval;
                         samplePointS.flag = true;
@@ -432,9 +431,48 @@ namespace planning
                 for(const auto s : anchor_s)
                 {
                     AnchorPoint anchor_point;
-
-                    anchor_point.longitudinal_bound = config.maxConstraintInterval;
-                    anchor_point.lateral_bound = config.maxConstraintInterval;
+                    // 前后 5m 范围，放开 bound 约束
+                    if(anchor_s.back() > 20.0)
+                    {
+                        if(anchor_s.front() + 10.0 > s)
+                        {
+                            anchor_point.longitudinal_bound = 0.4;
+                            anchor_point.lateral_bound = 0.4;
+                        }
+                        if(anchor_s.front() + 10.0 <= s && s < anchor_s.back() - 10.0)
+                        {
+                            anchor_point.longitudinal_bound = config.maxConstraintInterval;
+                            anchor_point.lateral_bound = config.maxConstraintInterval;
+                        }
+                        if(s >= anchor_s.back() - 10.0)
+                        {
+                            anchor_point.longitudinal_bound = 0.4;
+                            anchor_point.lateral_bound = 0.4;
+                        }
+                    }
+                    else if(anchor_s.back() >= 10.0 && anchor_s.back() <= 20.0)
+                    {
+                        if(anchor_s.front() + 5.0 > s)
+                        {
+                            anchor_point.longitudinal_bound = 0.4;
+                            anchor_point.lateral_bound = 0.4;
+                        }
+                        if(anchor_s.front() + 5.0 <= s && s < anchor_s.back() - 5.0)
+                        {
+                            anchor_point.longitudinal_bound = config.maxConstraintInterval;
+                            anchor_point.lateral_bound = config.maxConstraintInterval;
+                        }
+                        if(s >= anchor_s.back() - 5.0)
+                        {
+                            anchor_point.longitudinal_bound = 0.4;
+                            anchor_point.lateral_bound = 0.4;
+                        }
+                    }
+                    else
+                    {
+                        anchor_point.longitudinal_bound = config.maxConstraintInterval;
+                        anchor_point.lateral_bound = config.maxConstraintInterval;
+                    }
                     anchor_point.abs_s = s;
                     // 差值算法需要修改（用曲线差值）==> 适应高速公路场景
                     ReferencePoint ref_point = reference_line.getReferencePoint(s);

@@ -64,6 +64,8 @@ namespace planning
 
         void createPathGuass(const std::vector<ReferencePoint> &referencePoints);
 
+        void createBaseLineData(const std::vector<GaussData> &raw_reference_line);
+
     private:
         bool ImportData(std::vector<GaussData>& raw_reference_line);
 
