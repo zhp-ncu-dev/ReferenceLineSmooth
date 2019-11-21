@@ -47,14 +47,13 @@ namespace planning
 
     struct FemPosDeviationSmootherConfig
     {
-        double maxConstraintInterval;
-        float uTurnConstrainInterval;
-        float sampleRoadInterval;
-        float threshold;                // uTurn长度阈值
-        float ordinaryRoadExtendLength; // 连接处往uTurn的拓展长度，需保证 2*ordinaryRoadExtendLength < threshold
-        float deltaS;                   // 连接处两个元素的间距
-        double longitudinalBoundaryBound;
-        double lateralBoundaryBound;
+        double freewayRoadInterval;
+        float urbanRoadInterval;             // 城市道路
+        float urbanRoadTypeThreshold;
+        double freewayLongitudinalBoundaryBound;
+        double freewayLateralBoundaryBound;
+        double turnLongitudinalBoundaryBound;
+        double turnLateralBoundaryBound;
         double uTurnLongitudinalBoundaryBound;
         double uTurnLateralBoundaryBound;
         double weightFemPosDeviation;
@@ -73,14 +72,13 @@ namespace planning
         double sqpCtol;
 
         FemPosDeviationSmootherConfig() :
-        maxConstraintInterval(1.0),
-        uTurnConstrainInterval(0.2),
-        sampleRoadInterval(1.0),
-        threshold(12.0),
-        ordinaryRoadExtendLength(3.0),
-        deltaS(1.0),
-        longitudinalBoundaryBound(0.25),
-        lateralBoundaryBound(0.25),
+        freewayRoadInterval(2.0),
+        urbanRoadInterval(1.0),
+        urbanRoadTypeThreshold(5.0),
+        freewayLongitudinalBoundaryBound(0.5),
+        freewayLateralBoundaryBound(0.5),
+        turnLongitudinalBoundaryBound(0.15),
+        turnLateralBoundaryBound(0.15),
         uTurnLongitudinalBoundaryBound(1.0e-2),
         uTurnLateralBoundaryBound(1.0e-2),
         weightFemPosDeviation(1.0e5),

@@ -34,42 +34,31 @@ class ReferenceLineProvide
         AnchorPoint GetAnchorPoint(
                 const ReferenceLine& reference_line,
                 double s,
-                const std::vector<double> &rawReferenceLineKappas) const;
-
-        AnchorPoint GetAnchorPoint(
-                const ReferenceLine& reference_line,
-                double s,
                 const std::vector<double> &accumulateS,
-                const std::vector<std::pair<uint16_t, uint16_t>> &uTurnStartEndIndexPair,
                 const std::vector<double> &rawReferenceLineKappas) const;
 
-        bool GetAnchorPoints(
+        void GetAnchorPoints(
                 const ReferenceLine &reference_line,
                 std::vector<AnchorPoint> *anchor_points,
-                std::vector<std::vector<AnchorPoint>> &isnotUTurnPoints,
                 const std::vector<double> &rawReferenceLineKappas);
 
         void caculateRawReferenceLineKappas(
                 const ReferenceLine &raw_reference_line,
                 std::vector<double> &rawReferenceLineKappas);
 
-        void getUTurnStartEndPositionPair(
+        void getRoadTypeStartEndPositionPair(
                 const std::vector<ReferencePoint> &referencePoints,
                 const std::vector<double> &accumulateS,
-                std::vector<std::pair<uint16_t , uint16_t >> &uTurnStartEndIndexPair);
+                std::vector<std::pair<uint16_t , uint16_t >> &startEndIndexPair,
+                const int type);
 
         bool getSamplePointsSVector(
                 const std::vector<ReferencePoint> &referencePoints,
                 const std::vector<double> &accumulateS,
-                const std::vector<std::pair<uint16_t , uint16_t >> &uTurnStartEndIndexPair,
-                std::vector<sampleInformation> &samplePointsS);
-
-        void GetAnchorPoints(
-                const std::vector<sampleInformation> &samplePointsS,
-                const ReferenceLine &reference_line,
-                const std::vector<double> &rawReferenceLineKappas,
-                std::vector<AnchorPoint> *anchor_points,
-                std::vector<std::vector<AnchorPoint>> &isnotUTurnPoints);
+                const std::vector<std::pair<uint16_t, uint16_t>> &leftStartEndIndexPair,
+                const std::vector<std::pair<uint16_t, uint16_t>> &rightStartEndIndexPair,
+                const std::vector<std::pair<uint16_t, uint16_t>> &uTurnStartEndIndexPair,
+                std::vector<std::pair<double,bool>> &samplePointsS);
     };
 }
 
