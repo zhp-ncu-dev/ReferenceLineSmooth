@@ -78,7 +78,7 @@ namespace planning
         sampleRoadInterval(1.0),
         threshold(12.0),
         ordinaryRoadExtendLength(3.0),
-        deltaS(0.1),
+        deltaS(1.0),
         longitudinalBoundaryBound(0.25),
         lateralBoundaryBound(0.25),
         uTurnLongitudinalBoundaryBound(1.0e-2),

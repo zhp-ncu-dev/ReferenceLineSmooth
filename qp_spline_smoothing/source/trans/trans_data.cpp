@@ -59,10 +59,6 @@ namespace planning
         std::vector<double> accumulateS;
         for (const GaussData &referencePoint : raw_reference_line)
         {
-//            if(referencePoint.s > 400.0)
-//            {
-//                break;
-//            }
             had_map::MapPoint mapPoint(
                     math::Vec2d{referencePoint.x, referencePoint.y},
                     degreeToRadian(referencePoint.heading), referencePoint.type);

@@ -36,6 +36,13 @@ class ReferenceLineProvide
                 double s,
                 const std::vector<double> &rawReferenceLineKappas) const;
 
+        AnchorPoint GetAnchorPoint(
+                const ReferenceLine& reference_line,
+                double s,
+                const std::vector<double> &accumulateS,
+                const std::vector<std::pair<uint16_t, uint16_t>> &uTurnStartEndIndexPair,
+                const std::vector<double> &rawReferenceLineKappas) const;
+
         bool GetAnchorPoints(
                 const ReferenceLine &reference_line,
                 std::vector<AnchorPoint> *anchor_points,

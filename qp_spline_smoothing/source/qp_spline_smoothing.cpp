@@ -79,14 +79,14 @@ int main0()
         x.emplace_back(pointInfo.x() - zeroX);
         y.emplace_back(pointInfo.y() - zeroY);
         heading.emplace_back(radianToDegree(pointInfo.heading()));
-        kappa.emplace_back(std::atan(point.kappa() * 2.95) * 180.0 / M_PI * 17.0);
-//        kappa.emplace_back(point.kappa());
+//        kappa.emplace_back(std::atan(point.kappa() * 2.95) * 180.0 / M_PI * 17.0);
+        kappa.emplace_back(point.kappa());
         dkappa.emplace_back(point.dkappa());
     }
 
     plt::figure(1);
-    plt::plot(x, y, "r.");
-    plt::plot(originX, originY, "b-");
+//    plt::plot(x, y, "r.");
+    plt::plot(originX, originY, "b.");
 
     plt::grid("True");
     plt::axis("equal");
@@ -94,7 +94,7 @@ int main0()
     plt::ylabel("y");
 
     plt::figure(2);
-    plt::plot(s, heading, "r.");
+    //plt::plot(s, heading, "r.");
     plt::plot(acumulateS, headings, "b.");
 
     plt::grid("True");

@@ -43,6 +43,61 @@ namespace planning
         return anchor_point;
     }
 
+    AnchorPoint ReferenceLineProvide::GetAnchorPoint(
+            const planning::ReferenceLine &reference_line, double s,
+            const std::vector<double> &accumulateS,
+            const std::vector<std::pair<uint16_t, uint16_t>> &uTurnStartEndIndexPair,
+            const std::vector<double> &rawReferenceLineKappas) const
+    {
+        double longitudinalBound = 0.0;
+        double lateralBound = 0.0;
+        if(!ReferenceLineSmoothAlgorithm)
+        {
+            longitudinalBound = FLAGS_longitudinal_boundary_bound;
+            lateralBound = FLAGS_lateral_boundary_bound;
+        }
+        else
+        {
+            FemPosDeviationSmootherConfig config;
+            size_t index = 0;
+            while(s < accumulateS[index])
+            {
+                ++index;
+            }
+            if(std::fabs(rawReferenceLineKappas[index]) <= 0.01)
+            {
+                longitudinalBound = 0.4/std::sqrt(2.0);
+                lateralBound = 0.4/std::sqrt(2.0);
+            }
+            else
+            {
+                longitudinalBound = 0.2/std::sqrt(2.0);
+                lateralBound = 0.2/std::sqrt(2.0);
+            }
+            for(const auto &indexPair : uTurnStartEndIndexPair)
+            {
+                if(s >= accumulateS[indexPair.first] && s <= accumulateS[indexPair.second])
+                {
+                    longitudinalBound = config.uTurnLongitudinalBoundaryBound;
+                    lateralBound = config.uTurnLateralBoundaryBound;
+                }
+            }
+        }
+        AnchorPoint anchor_point;
+        anchor_point.longitudinal_bound = longitudinalBound;
+        anchor_point.lateral_bound = lateralBound;
+        anchor_point.abs_s = s;
+        ReferencePoint ref_point = reference_line.getReferencePoint(s);
+
+        anchor_point.pointInfo = ref_point.pointInfo();
+        anchor_point.xds = ref_point.xds();
+        anchor_point.yds = ref_point.yds();
+        anchor_point.xseconds = ref_point.xsenconds();
+        anchor_point.yseconds = ref_point.ysenconds();
+
+        return anchor_point;
+    }
+
     bool ReferenceLineProvide::GetAnchorPoints(
             const ReferenceLine &reference_line,
             std::vector<AnchorPoint> *anchor_points,
@@ -55,6 +110,28 @@ namespace planning
         std::vector<double> accumulateS = reference_line.accumulateS();
         std::vector<std::pair<uint16_t, uint16_t >> uTurnStartEndIndexPair;
         getUTurnStartEndPositionPair(referencePoints, accumulateS, uTurnStartEndIndexPair);
+
+/**/
+        //一共的段数再加上起点坐标
+        int num_of_anchor = std::max(2, static_cast<int>(reference_line.length() / interval + 0.5));
+        std::vector<double> anchor_s;
+        math::uniform_slice(0.0,reference_line.length(),num_of_anchor - 1,&anchor_s);
+        int i = 0;
+        for (const double s : anchor_s) {
+            anchor_points->emplace_back(GetAnchorPoint(reference_line, s,
+                    accumulateS, uTurnStartEndIndexPair, rawReferenceLineKappas));
+            i++;
+        }
+        // 检查最后一个点，是否未 nan
+        if(std::isnan(anchor_points->back().pointInfo.x()) ||
+           std::isnan(anchor_points->back().pointInfo.y()))
+        {
+            anchor_points->pop_back();
+        }
+        return false;
+/**/
+
+/*
         std::vector<sampleInformation> samplePointsS;
         if(getSamplePointsSVector(referencePoints, accumulateS, uTurnStartEndIndexPair, samplePointsS))
         {
@@ -86,6 +163,8 @@ namespace planning
             }
             return false;
         }
+*/
+
     }
 
     void ReferenceLineProvide::caculateRawReferenceLineKappas(

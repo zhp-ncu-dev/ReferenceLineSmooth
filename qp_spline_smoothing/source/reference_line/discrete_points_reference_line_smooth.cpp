@@ -116,6 +116,7 @@ namespace planning
                 return true;
             }
         }
+        return false;
     }
 
     void DiscretePointsReferenceLineSmooth::normalizePoints(
@@ -301,7 +302,7 @@ namespace planning
             const double &deltaS,
             planning::ReferenceLine *const smoothedReferenceLine)
     {
-        /*
+
         std::vector<std::pair<double, double>> allXYPoints;
         for(const auto &xyPoints : smoothedPoints2dVec)
         {
@@ -345,8 +346,8 @@ namespace planning
         *smoothedReferenceLine = ReferenceLine(referencePoints, accumulatedS);
 
         return true;
-*/
 
+/*
         std::vector<std::vector<std::pair<double, double>>> xyPointsVec;
         std::vector<std::vector<double>> headingsVec;
         std::vector<std::vector<double>> kappasVec;
@@ -446,7 +447,7 @@ namespace planning
 
         *smoothedReferenceLine = ReferenceLine(referencePoints, allAccumulatedS);
         return true;
-
+*/
     }
 
 }// end namespace
