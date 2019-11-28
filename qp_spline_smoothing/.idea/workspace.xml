@@ -14,20 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52895450-f4fc-4acb-a240-1ed75793112b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ins_Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ins_Data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/qp_spline_smoothing.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/qp_spline_smoothing.dir/source/reference_line/reference_line_provider.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/qp_spline_smoothing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/qp_spline_smoothing" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/common/config/reference_line_config/smooth_reference_line_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/common/config/reference_line_config/smooth_reference_line_config.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/common/curve1d/cubic_spline.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/common/curve1d/cubic_spline.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smooth.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smooth.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/qp_spline_smoothing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/qp_spline_smoothing.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smooth.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smooth.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="52895450-f4fc-4acb-a240-1ed75793112b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,98 +27,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/common/config/reference_line_config/smooth_reference_line_config.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
-              <folding>
-                <element signature="e#139#162#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/qp_spline_smoothing.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smooth.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="e#37#119#0" expanded="true" />
-                <element signature="e#3354#4922#0" />
-                <element signature="e#4928#6181#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="58" column="42" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-                <element signature="e#10683#16932#0" />
-                <element signature="e#13188#16926#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smooth.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-              <folding>
-                <element signature="e#52#94#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/common/curve1d/cubic_spline.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2850">
-              <caret line="150" selection-start-line="150" selection-end-line="150" />
-              <folding>
-                <element signature="e#991#1008#0" expanded="true" />
-                <element signature="e#1252#2453#1" />
-                <element signature="e#3995#4077#0" />
-                <element signature="e#4078#4412#0" />
-                <element signature="e#4413#4543#0" />
-                <element signature="e#4546#5009#0" />
-                <element signature="e#5010#5363#0" />
-                <element signature="e#5364#5532#0" />
-                <element signature="e#5533#5637#0" />
-                <element signature="e#5639#6911#0" />
-                <element signature="e#6912#7364#0" />
-                <element signature="e#7365#7838#0" />
-                <element signature="e#7840#8184#0" />
-                <element signature="e#8242#8676#0" />
-                <element signature="e#8679#11903#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -206,6 +102,32 @@
             <path>
               <item name="qp_spline_smoothing" type="b2602c69:ProjectViewProjectNode" />
               <item name="qp_spline_smoothing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qp_spline_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qp_spline_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qp_spline_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qp_spline_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qp_spline_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qp_spline_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qp_spline_smoothing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qp_spline_smoothing" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="reference_line_config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -327,17 +249,17 @@
       <workItem from="1574835875422" duration="365000" />
       <workItem from="1574844531769" duration="1427000" />
       <workItem from="1574846340279" duration="43000" />
+      <workItem from="1574903946868" duration="166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319124000" />
+    <option name="totallyTimeSpent" value="319290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25179857" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22302158" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -348,7 +270,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.9683878" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.08956797" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.32912722" />
@@ -736,19 +658,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smooth.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#52#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/include/common/config/reference_line_config/smooth_reference_line_config.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="-412">
+          <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
           <folding>
             <element signature="e#139#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/qp_spline_smoothing.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/reference_line/discrete_points_reference_line_smooth.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
+        <state relative-caret-position="728">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#37#119#0" expanded="true" />
@@ -760,7 +702,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/common/smooth_line/discreted_points_smooth/discrete_points_math.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
+        <state relative-caret-position="728">
           <caret line="58" column="42" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="42" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
@@ -770,46 +712,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/reference_line/discrete_points_reference_line_smooth.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <element signature="e#52#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/common/curve1d/cubic_spline.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2850">
+        <state relative-caret-position="728">
           <caret line="150" selection-start-line="150" selection-end-line="150" />
           <folding>
             <element signature="e#991#1008#0" expanded="true" />
             <element signature="e#1252#2453#1" />
-            <element signature="e#3995#4077#0" />
-            <element signature="e#4078#4412#0" />
-            <element signature="e#4413#4543#0" />
-            <element signature="e#4546#5009#0" />
-            <element signature="e#5010#5363#0" />
-            <element signature="e#5364#5532#0" />
-            <element signature="e#5533#5637#0" />
-            <element signature="e#5639#6911#0" />
-            <element signature="e#6912#7364#0" />
-            <element signature="e#7365#7838#0" />
-            <element signature="e#7840#8184#0" />
-            <element signature="e#8242#8676#0" />
-            <element signature="e#8679#11903#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/qp_spline_smoothing.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
