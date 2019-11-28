@@ -43,7 +43,7 @@ namespace planning
 
     // true:  discrete-points
     // false: qp-spline
-    const bool ReferenceLineSmoothAlgorithm = true;
+    const bool ReferenceLineSmoothAlgorithm = false;
 
     struct FemPosDeviationSmootherConfig
     {

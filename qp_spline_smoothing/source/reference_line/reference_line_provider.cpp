@@ -59,44 +59,60 @@ namespace planning
         getRoadTypeStartEndPositionPair(referencePoints, accumulateS, rightStartEndIndexPair, 3);
         getRoadTypeStartEndPositionPair(referencePoints, accumulateS, uTurnStartEndIndexPair, 4);
         std::vector<std::pair<double,bool>> samplePointsS;
-        if(getSamplePointsSVector(referencePoints, accumulateS, leftStartEndIndexPair,
-                rightStartEndIndexPair, uTurnStartEndIndexPair, samplePointsS))
+        if(ReferenceLineSmoothAlgorithm)
         {
-            for(const auto &s : samplePointsS)
+            if(getSamplePointsSVector(referencePoints, accumulateS, leftStartEndIndexPair,
+                                      rightStartEndIndexPair, uTurnStartEndIndexPair, samplePointsS))
             {
-                AnchorPoint anchor_point;
-                if(s.second)
+                for(const auto &s : samplePointsS)
                 {
-                    anchor_point.longitudinal_bound = config.turnLongitudinalBoundaryBound;
-                    anchor_point.lateral_bound = config.turnLateralBoundaryBound;
-                    for(const auto &indexPair : uTurnStartEndIndexPair)
+                    AnchorPoint anchor_point;
+                    if(s.second)
                     {
-                        if(s.first >= accumulateS[indexPair.first] && s.first <= accumulateS[indexPair.second])
+                        anchor_point.longitudinal_bound = config.turnLongitudinalBoundaryBound;
+                        anchor_point.lateral_bound = config.turnLateralBoundaryBound;
+                        for(const auto &indexPair : uTurnStartEndIndexPair)
                         {
-                            anchor_point.longitudinal_bound = config.uTurnLongitudinalBoundaryBound;
-                            anchor_point.lateral_bound = config.uTurnLateralBoundaryBound;
+                            if(s.first >= accumulateS[indexPair.first] && s.first <= accumulateS[indexPair.second])
+                            {
+                                anchor_point.longitudinal_bound = config.uTurnLongitudinalBoundaryBound;
+                                anchor_point.lateral_bound = config.uTurnLateralBoundaryBound;
+                            }
                         }
                     }
-                }
-                else
-                {
-                    anchor_point.longitudinal_bound = config.freewayLongitudinalBoundaryBound;
-                    anchor_point.lateral_bound = config.freewayLateralBoundaryBound;
-                }
-                anchor_point.abs_s = s.first;
-                ReferencePoint ref_point = reference_line.getReferencePoint(s.first);
-                anchor_point.pointInfo = ref_point.pointInfo();
-                anchor_point.xds = ref_point.xds();
-                anchor_point.yds = ref_point.yds();
-                anchor_point.xseconds = ref_point.xsenconds();
-                anchor_point.yseconds = ref_point.ysenconds();
+                    else
+                    {
+                        anchor_point.longitudinal_bound = config.freewayLongitudinalBoundaryBound;
+                        anchor_point.lateral_bound = config.freewayLateralBoundaryBound;
+                    }
+                    anchor_point.abs_s = s.first;
+                    ReferencePoint ref_point = reference_line.getReferencePoint(s.first);
+                    anchor_point.pointInfo = ref_point.pointInfo();
+                    anchor_point.xds = ref_point.xds();
+                    anchor_point.yds = ref_point.yds();
+                    anchor_point.xseconds = ref_point.xsenconds();
+                    anchor_point.yseconds = ref_point.ysenconds();
 
-                anchor_points->emplace_back(anchor_point);
+                    anchor_points->emplace_back(anchor_point);
+                }
+            }
+            else
+            {
+                const double interval = config.freewayRoadInterval;
+                int num_of_anchor = std::max(2, static_cast<int>(reference_line.length() / interval + 0.1));
+                std::vector<double> anchor_s;
+                math::uniform_slice(0.0,reference_line.length(),num_of_anchor - 1,&anchor_s);
+                int i = 0;
+                for (const double s : anchor_s) {
+                    anchor_points->emplace_back(GetAnchorPoint(reference_line, s,
+                                                               accumulateS, rawReferenceLineKappas));
+                    i++;
+                }
             }
         }
         else
         {
-            const double interval = ReferenceLineSmoothAlgorithm ? config.freewayRoadInterval : FLAGS_max_point_interval;
+            const double interval = FLAGS_max_point_interval;
             int num_of_anchor = std::max(2, static_cast<int>(reference_line.length() / interval + 0.1));
             std::vector<double> anchor_s;
             math::uniform_slice(0.0,reference_line.length(),num_of_anchor - 1,&anchor_s);
@@ -107,6 +123,7 @@ namespace planning
                 i++;
             }
         }
+
         if(std::isnan(anchor_points->back().pointInfo.x()) ||
            std::isnan(anchor_points->back().pointInfo.y()))
         {
