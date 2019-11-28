@@ -95,7 +95,7 @@ int main0()
 
     plt::figure(2);
     plt::plot(s, heading, "r.");
-    plt::plot(acumulateS, headings, "b.");
+    plt::plot(acumulateS, originHeading, "b.");
 
     plt::grid("True");
     //plt::axis("equal");

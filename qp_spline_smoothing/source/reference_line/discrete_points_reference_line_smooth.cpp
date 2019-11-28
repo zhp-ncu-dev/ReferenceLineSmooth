@@ -47,8 +47,9 @@ namespace planning
         deNormalizePoints(&smoothedPoints2d);
 
         std::vector<std::pair<double, double>> points;
-        curveInterpolate(smoothedPoints2d, points, deltaS);
-        generateRefPointProfile(points, smoothedReferenceLine);
+        std::vector<double> smoothedHeadings;
+        curveInterpolate(smoothedPoints2d, points, smoothedHeadings, deltaS);
+        generateRefPointProfile(points, smoothedHeadings, smoothedReferenceLine);
 
         return true;
     }
@@ -86,6 +87,7 @@ namespace planning
     void DiscretePointsReferenceLineSmooth::curveInterpolate(
             const std::vector<std::pair<double, double>> &discretePoint2d,
             std::vector<std::pair<double, double>> &smoothedPoint2d,
+            std::vector<double> &smoothedHeadings,
             const double &deltaS)
     {
         std::vector<double> accumulateS, x, y;
@@ -117,6 +119,7 @@ namespace planning
         for(double s = 0.0; s < totalS; s += deltaS)
         {
             smoothedPoint2d.emplace_back(std::make_pair(cubicSX(s), cubicSY(s)));
+            smoothedHeadings.emplace_back(std::atan2(cubicSY.deriv(1, s), cubicSX.deriv(1, s)));
         }
     }
 
@@ -161,8 +164,10 @@ namespace planning
     // todo： 增加车道属性
     bool DiscretePointsReferenceLineSmooth::generateRefPointProfile(
             const std::vector<std::pair<double, double>> &xyPoints,
+            const std::vector<double> &smoothedHeadings,
             ReferenceLine *const smoothedReferenceLine)
     {
+        /*
         std::vector<double> headings;
         std::vector<double> kappas;
         std::vector<double> dkappas;
@@ -172,7 +177,93 @@ namespace planning
         {
             return false;
         }
+        */
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+        std::vector<double> headings = smoothedHeadings;
+        std::vector<double> accumulatedS;
+        std::vector<double> kappas;
+        std::vector<double> dkappas;
+
+        // accumulated_s calculation
+        double distance = 0.0;
+        accumulatedS.emplace_back(distance);
+        double fx = xyPoints[0].first;
+        double fy = xyPoints[0].second;
+        double nx = 0.0;
+        double ny = 0.0;
+        size_t pointSize = xyPoints.size();
+        for (size_t i = 1; i < pointSize; ++i)
+        {
+            nx = xyPoints[i].first;
+            ny = xyPoints[i].second;
+            double end_segment_s =
+                    std::sqrt((fx - nx) * (fx - nx) + (fy - ny) * (fy - ny));
+            accumulatedS.emplace_back(end_segment_s + distance);
+            distance += end_segment_s;
+            fx = nx;
+            fy = ny;
+        }
+
+        // Kappa calculation
+        double kappa = 0.0;
+        double kappaLast = 0.0;
+        for(size_t i = 0; i < pointSize; ++i)
+        {
+            double deltaAngle = 0.0;
+            double deltaS = 0.0;
+
+            if(i == 0)
+            {
+                deltaAngle = headings.at(i+1) - headings.at(i);
+                deltaS = accumulatedS.at(i+1) - accumulatedS.at(i);
+            }
+            else if(i == pointSize - 1)
+            {
+                deltaAngle = headings.at(i) - headings.at(i-1);
+                deltaS = accumulatedS.at(i) - accumulatedS.at(i-1);
+            }
+            else
+            {
+                deltaAngle = headings.at(i+1) - headings.at(i-1);
+                deltaS = accumulatedS.at(i+1) - accumulatedS.at(i-1);
+            }
+
+            kappa = deltaAngle / (deltaS + 1.0e-6);
+            if(i > 5)
+            {
+                if(std::abs(kappa - kappaLast) > 0.1 && std::abs(kappaLast) < 0.5)
+                {
+                    kappa = kappaLast;
+                }
+            }
+            kappaLast = kappa;
+            kappas.emplace_back(kappa);
+        }
+
+        // Dkappa calculation
+        for (std::size_t i = 0; i < pointSize; ++i)
+        {
+            double dkappa = 0.0;
+            if (i == 0)
+            {
+                dkappa = (kappas.at(i + 1) - kappas.at(i)) /
+                         (accumulatedS.at(i + 1) - accumulatedS.at(i));
+            }
+            else if (i == pointSize - 1)
+            {
+                dkappa = (kappas.at(i) - kappas.at(i - 1)) /
+                         (accumulatedS.at(i) - accumulatedS.at(i - 1));
+            }
+            else
+            {
+                dkappa = (kappas.at(i + 1) - kappas.at(i - 1)) /
+                         (accumulatedS.at(i + 1) - accumulatedS.at(i - 1));
+            }
+            dkappas.emplace_back(dkappa);
+        }
+
+///////////////////////////////////////////////////////////////////////////////////////////////
         // heading 转换:
         // todo: 平滑后的 heading 与 原始值相差了 1°, 待解决
         for(size_t i = 0; i < headings.size(); ++i)

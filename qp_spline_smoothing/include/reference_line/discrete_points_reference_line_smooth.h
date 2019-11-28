@@ -34,6 +34,7 @@ namespace planning
         void curveInterpolate(
                 const std::vector<std::pair<double, double>> &discretePoint2d,
                 std::vector<std::pair<double, double>> &smoothedPoint2d,
+                std::vector<double> &smoothedHeadings,
                 const double &deltaS);
 
         void normalizePoints(std::vector<std::pair<double, double>>* xyPoints);
@@ -42,6 +43,7 @@ namespace planning
 
         bool generateRefPointProfile(
                 const std::vector<std::pair<double, double>>& xyPoints,
+                const std::vector<double> &smoothedHeadings,
                 ReferenceLine *const smoothedReferenceLine);
 
         std::vector<AnchorPoint> m_anchorPoints;

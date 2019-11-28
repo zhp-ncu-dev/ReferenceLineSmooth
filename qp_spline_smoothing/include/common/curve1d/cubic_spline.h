@@ -113,8 +113,6 @@ public:
     double deriv(int order, double x) const;
 };
 
-
-
 // ---------------------------------------------------------------------
 // implementation part, which could be separated into a cpp file
 // ---------------------------------------------------------------------
@@ -261,9 +259,6 @@ std::vector<double> band_matrix::lu_solve(const std::vector<double>& b,
     x=this->r_solve(y);
     return x;
 }
-
-
-
 
 // spline implementation
 // -----------------------
