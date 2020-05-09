@@ -43,7 +43,7 @@ namespace planning
 
     // true:  discrete-points
     // false: qp-spline
-    const bool ReferenceLineSmoothAlgorithm = false;
+    const bool ReferenceLineSmoothAlgorithm = true;
 
     struct FemPosDeviationSmootherConfig
     {
@@ -72,7 +72,7 @@ namespace planning
         double sqpCtol;
 
         FemPosDeviationSmootherConfig() :
-        freewayRoadInterval(2.0),
+        freewayRoadInterval(3.0),
         urbanRoadInterval(1.0),
         urbanRoadTypeThreshold(5.0),
         freewayLongitudinalBoundaryBound(0.3),

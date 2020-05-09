@@ -59,7 +59,7 @@ namespace planning
         std::vector<double> accumulateS;
         for (const GaussData &referencePoint : raw_reference_line)
         {
-            if(referencePoint.s > 200)
+            if(referencePoint.s > 800)
             {
                 continue;
             }
