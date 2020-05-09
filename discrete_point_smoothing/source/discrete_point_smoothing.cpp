@@ -71,14 +71,14 @@ int main(int argv, char* argc[])
     plt::ylabel("y[m]");
 
     // figure(2)
-//    plt::figure(2);
-//    plt::plot(spareReferenceLineS, spareReferenceLineYaw, "b.");
-//    plt::plot(refPointsS, refPointsYaw, "r.");
+    plt::figure(2);
+    plt::plot(spareReferenceLineS, spareReferenceLineYaw, "b.");
+    plt::plot(refPointsS, refPointsYaw, "r.");
 
-//    plt::grid("True");
-//    //plt::axis("equal");
-//    plt::xlabel("s");
-//    plt::ylabel("yaw");
+    plt::grid("True");
+    //plt::axis("equal");
+    plt::xlabel("s");
+    plt::ylabel("yaw");
 
     // figure(3)
     plt::figure(3);

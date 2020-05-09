@@ -50,6 +50,17 @@ bool DiscretePointsMath::ComputePathProfile(
         headings->push_back(std::atan2(dys[i], dxs[i]));
     }
 
+    // heading　转换
+    for (auto &heading : *headings)
+    {
+        double angle = -heading - 90 * M_PI / 180;
+        double a = std::fmod(angle + M_PI, 2.0 * M_PI);
+        if (a < 0.0)
+        {
+            a = a + 2.0 * M_PI;
+        }
+        heading = a;
+    }
     // Get linear interpolated s for dkappa calculation
     double distance = 0.0;
     accumulated_s->push_back(distance);
