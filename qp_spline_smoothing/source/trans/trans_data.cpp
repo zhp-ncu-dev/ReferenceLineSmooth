@@ -13,7 +13,7 @@ namespace planning
     void TransData::createPathGuass(
             const std::vector<planning::ReferencePoint> &referencePoints)
     {
-        FILE *fpWrite = fopen("/home/zhp/桌面/SmoothTest/smoothedReferenceLine.txt", "w");
+        FILE *fpWrite = fopen("smoothedReferenceLine.txt", "w");
         if(fpWrite == NULL)
         {
             exit(1);
@@ -30,7 +30,7 @@ namespace planning
 
     void TransData::createBaseLineData(const std::vector<planning::GaussData> &raw_reference_line)
     {
-        FILE *fpWrite = fopen("/home/zhp/桌面/SmoothTest/BaseLine.txt", "w");
+        FILE *fpWrite = fopen("BaseLine.txt", "w");
         if(fpWrite == NULL)
         {
             exit(1);
@@ -171,7 +171,7 @@ namespace planning
     bool TransData::ImportInsData(std::vector<InsData>& insdata)
     {
         InsData tempFrame;
-        FILE* fp = fopen("../Ins_Data.txt","r+");
+        FILE* fp = fopen("Ins_Data.txt","r+");
         if(fp == NULL)
         {
             std::cout << "open file fail" << std::endl ;
