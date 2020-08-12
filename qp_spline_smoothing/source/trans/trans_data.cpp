@@ -171,7 +171,7 @@ namespace planning
     bool TransData::ImportInsData(std::vector<InsData>& insdata)
     {
         InsData tempFrame;
-        FILE* fp = fopen("Ins_Data.txt","r+");
+        FILE* fp = fopen("../Ins_Data.txt","r+");
         if(fp == NULL)
         {
             std::cout << "open file fail" << std::endl ;

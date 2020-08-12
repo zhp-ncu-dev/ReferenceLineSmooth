@@ -79,7 +79,7 @@ int main0()
         x.emplace_back(pointInfo.x() - zeroX);
         y.emplace_back(pointInfo.y() - zeroY);
         heading.emplace_back(radianToDegree(pointInfo.heading()));
-        kappa.emplace_back(std::atan(point.kappa() * 2.95) * 180.0 / M_PI * 16.0);
+        kappa.emplace_back(std::atan(point.kappa()));
 //        kappa.emplace_back(point.kappa());
         dkappa.emplace_back(point.dkappa());
     }

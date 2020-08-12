@@ -150,6 +150,12 @@
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp">
 			<Option target="qp_spline_smoothing"/>
 		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/smooth_spline/active_set_qp_solver.cpp">
 			<Option target="qp_spline_smoothing"/>
 		</Unit>
@@ -214,6 +220,9 @@
 			<Option target="qp_spline_smoothing"/>
 		</Unit>
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/discrete_points_reference_line_smooth.cpp">
+			<Option target="qp_spline_smoothing"/>
+		</Unit>
+		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/piecewise_jerk_smooth.cpp">
 			<Option target="qp_spline_smoothing"/>
 		</Unit>
 		<Unit filename="/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/qp_spline_reference_line_smooth.cpp">

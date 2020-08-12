@@ -609,6 +609,60 @@ source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp
 	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.s
 .PHONY : source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp.s
 
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.o: source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.o
+
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.o
+
+# target to build an object file
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.o:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.o
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.o
+
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.i: source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.i
+
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.i
+
+# target to preprocess a source file
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.i:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.i
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.i
+
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.s: source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.s
+
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.s
+
+# target to generate assembly for a file
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.s:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.s
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.cpp.s
+
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.o: source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.o
+
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.o
+
+# target to build an object file
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.o:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.o
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.o
+
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.i: source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.i
+
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.i
+
+# target to preprocess a source file
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.i:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.i
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.i
+
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.s: source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.s
+
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.s
+
+# target to generate assembly for a file
+source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.s:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.s
+.PHONY : source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.cpp.s
+
 source/common/smooth_line/smooth_spline/active_set_qp_solver.o: source/common/smooth_line/smooth_spline/active_set_qp_solver.cpp.o
 
 .PHONY : source/common/smooth_line/smooth_spline/active_set_qp_solver.o
@@ -1203,6 +1257,33 @@ source/reference_line/discrete_points_reference_line_smooth.cpp.s:
 	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/reference_line/discrete_points_reference_line_smooth.cpp.s
 .PHONY : source/reference_line/discrete_points_reference_line_smooth.cpp.s
 
+source/reference_line/piecewise_jerk_smooth.o: source/reference_line/piecewise_jerk_smooth.cpp.o
+
+.PHONY : source/reference_line/piecewise_jerk_smooth.o
+
+# target to build an object file
+source/reference_line/piecewise_jerk_smooth.cpp.o:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/reference_line/piecewise_jerk_smooth.cpp.o
+.PHONY : source/reference_line/piecewise_jerk_smooth.cpp.o
+
+source/reference_line/piecewise_jerk_smooth.i: source/reference_line/piecewise_jerk_smooth.cpp.i
+
+.PHONY : source/reference_line/piecewise_jerk_smooth.i
+
+# target to preprocess a source file
+source/reference_line/piecewise_jerk_smooth.cpp.i:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/reference_line/piecewise_jerk_smooth.cpp.i
+.PHONY : source/reference_line/piecewise_jerk_smooth.cpp.i
+
+source/reference_line/piecewise_jerk_smooth.s: source/reference_line/piecewise_jerk_smooth.cpp.s
+
+.PHONY : source/reference_line/piecewise_jerk_smooth.s
+
+# target to generate assembly for a file
+source/reference_line/piecewise_jerk_smooth.cpp.s:
+	$(MAKE) -f CMakeFiles/qp_spline_smoothing.dir/build.make CMakeFiles/qp_spline_smoothing.dir/source/reference_line/piecewise_jerk_smooth.cpp.s
+.PHONY : source/reference_line/piecewise_jerk_smooth.cpp.s
+
 source/reference_line/qp_spline_reference_line_smooth.o: source/reference_line/qp_spline_reference_line_smooth.cpp.o
 
 .PHONY : source/reference_line/qp_spline_reference_line_smooth.o
@@ -1401,6 +1482,12 @@ help:
 	@echo "... source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.o"
 	@echo "... source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.i"
 	@echo "... source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.s"
+	@echo "... source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.o"
+	@echo "... source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.i"
+	@echo "... source/common/smooth_line/piecewise_jerk/piecewise_jerk_problem.s"
+	@echo "... source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.o"
+	@echo "... source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.i"
+	@echo "... source/common/smooth_line/piecewise_jerk/piecewise_jerk_smooth_problem.s"
 	@echo "... source/common/smooth_line/smooth_spline/active_set_qp_solver.o"
 	@echo "... source/common/smooth_line/smooth_spline/active_set_qp_solver.i"
 	@echo "... source/common/smooth_line/smooth_spline/active_set_qp_solver.s"
@@ -1467,6 +1554,9 @@ help:
 	@echo "... source/reference_line/discrete_points_reference_line_smooth.o"
 	@echo "... source/reference_line/discrete_points_reference_line_smooth.i"
 	@echo "... source/reference_line/discrete_points_reference_line_smooth.s"
+	@echo "... source/reference_line/piecewise_jerk_smooth.o"
+	@echo "... source/reference_line/piecewise_jerk_smooth.i"
+	@echo "... source/reference_line/piecewise_jerk_smooth.s"
 	@echo "... source/reference_line/qp_spline_reference_line_smooth.o"
 	@echo "... source/reference_line/qp_spline_reference_line_smooth.i"
 	@echo "... source/reference_line/qp_spline_reference_line_smooth.s"

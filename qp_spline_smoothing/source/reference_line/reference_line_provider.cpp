@@ -5,6 +5,7 @@
 #include "common/config/config.h"
 #include "reference_line/reference_line_provider.h"
 #include "reference_line/discrete_points_reference_line_smooth.h"
+#include "reference_line/piecewise_jerk_smooth.h"
 #include "common/smooth_line/discreted_points_smooth/discrete_points_math.h"
 #include "common/curve1d/cubic_spline.h"
 

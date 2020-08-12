@@ -72,8 +72,8 @@ namespace planning
         double sqpCtol;
 
         FemPosDeviationSmootherConfig() :
-        freewayRoadInterval(3.0),
-        urbanRoadInterval(1.0),
+        freewayRoadInterval(0.5),
+        urbanRoadInterval(0.5),
         urbanRoadTypeThreshold(5.0),
         freewayLongitudinalBoundaryBound(0.3),
         freewayLateralBoundaryBound(0.3),
