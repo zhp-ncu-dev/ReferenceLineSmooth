@@ -13,7 +13,7 @@ namespace planning
     void TransData::createPathGuass(
             const std::vector<planning::ReferencePoint> &referencePoints)
     {
-        FILE *fpWrite = fopen("smoothedReferenceLine.txt", "w");
+        FILE *fpWrite = fopen("/home/zhp/桌面/smoothedReferenceLine.txt", "w");
         if(fpWrite == NULL)
         {
             exit(1);
@@ -21,9 +21,8 @@ namespace planning
 
         for(const auto point : referencePoints)
         {
-            fprintf(fpWrite, "%d %.3f %.3f %.2f %.2f %.2f %.2f %.2f %.2f\r\n",
-                    0, point.pointInfo().x(), point.pointInfo().y(), 0.0, radianToDegree(point.pointInfo().heading()),
-                    0.0, 0.0, 0.0, 0.0);
+            fprintf(fpWrite, "%lf %lf %lf %lf %lf\r\n",
+                    point.pointInfo().x(), point.pointInfo().y(), radianToDegree(point.pointInfo().heading()),1.0/point.kappa(), point.kappa());
         }
         fclose(fpWrite);
     }
@@ -59,13 +58,13 @@ namespace planning
         std::vector<double> accumulateS;
         for (const GaussData &referencePoint : raw_reference_line)
         {
-            if(referencePoint.s > 800)
-            {
-                continue;
-            }
+//            if(referencePoint.s > 800)
+//            {
+//                continue;
+//            }
             had_map::MapPoint mapPoint(
                     math::Vec2d{referencePoint.x, referencePoint.y},
-                    degreeToRadian(referencePoint.heading), referencePoint.type);
+                    degreeToRadian(referencePoint.heading), 0);
             ReferencePoint point(mapPoint, laneWidth/2.0, laneWidth/2.0);
             accumulateS.emplace_back(referencePoint.s);
             referencePoints.emplace_back(point);
@@ -226,7 +225,7 @@ namespace planning
         z = 0;
         const char* bj54proj = " +proj=longlat +towgs84=0.0000,0.0000,0.0000 +a=6378245.0000 +rf=298.3 +lat_0=0.00000000 +lon_0=104.000000000 +lat_1=24.000000000 +lat_2=40.000000000 +x_0=0.000 +y_0=0.000 +units=m +no_defs";
         static projPJ lcc = pj_init_plus(bj54proj);
-        static projPJ tmerc = pj_init_plus("+proj=tmerc +ellps=krass +lat_1=25n +lat_2=47n +lon_0=116.24e +x_0=20500000 +y_0=0 +units=m +k=1.0");
+        static projPJ tmerc = pj_init_plus("+proj=tmerc +ellps=krass +lat_1=25n +lat_2=47n +lon_0=121.50e +x_0=20500000 +y_0=0 +units=m +k=1.0");
         int ret = pj_transform(lcc, tmerc, 1, 1, &x, &y, &z);
         //pj_free(pj);
         dPoint xoy;

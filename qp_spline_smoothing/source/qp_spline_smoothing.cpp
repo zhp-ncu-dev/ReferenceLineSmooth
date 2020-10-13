@@ -31,92 +31,91 @@ int main0()
     std::cout << "smooth referenceline spendTime = " <<
             static_cast<double>(endTime - startTime) / CLOCKS_PER_SEC << std::endl;
 
-    // get results
-    std::vector<ReferencePoint> originPoints = referenceLine.referencePoints();
-    std::vector<double> originS = referenceLine.accumulateS();
-    std::vector<ReferencePoint> refPoints = referenceLineResult.referencePoints();
-    std::vector<double> s = referenceLineResult.accumulateS();
-
-    transData.createPathGuass(refPoints);
-
-    std::cout << "平滑距离 s = " << s.back() << std::endl;
-
-    // plot
-
-    MapPoint pointInfo = originPoints[0].pointInfo();
-    double zeroX = pointInfo.x();
-    double zeroY = pointInfo.y();
-    std::vector<double> originX, originY, originHeading;
-    std::vector<std::pair<double, double>> xyPoints;
-    for(auto const & point : originPoints)
-    {
-        pointInfo = point.pointInfo();
-        originX.emplace_back(pointInfo.x() - zeroX);
-        originY.emplace_back(pointInfo.y() - zeroY);
-        originHeading.emplace_back(radianToDegree(pointInfo.heading()));
-        xyPoints.emplace_back(pointInfo.x() - zeroX, pointInfo.y() - zeroY);
-    }
-    std::vector<double> headings, kappas, dkappas, acumulateS;
-    if(!DiscretePointsMath::ComputePathProfile(xyPoints, &headings, &acumulateS, &kappas, &dkappas))
-    {
-        std::cout << "原始参考线计算heading错误!" << std::endl;
-    }
-    for(size_t i = 0; i < headings.size(); ++i)
-    {
-        double angle = -headings[i] - degreeToRadian(90);
-        double a = std::fmod(angle + M_PI, 2.0 * M_PI);
-        if(a < 0.0)
-        {
-            a = a + 2.0 * M_PI;
-        }
-        headings[i] = radianToDegree(a);
-    }
-
-    std::vector<double> x, y, heading, kappa, dkappa;
-    for (auto const &point : refPoints)
-    {
-        pointInfo = point.pointInfo();
-        x.emplace_back(pointInfo.x() - zeroX);
-        y.emplace_back(pointInfo.y() - zeroY);
-        heading.emplace_back(radianToDegree(pointInfo.heading()));
-        kappa.emplace_back(std::atan(point.kappa()));
-//        kappa.emplace_back(point.kappa());
-        dkappa.emplace_back(point.dkappa());
-    }
-
-    plt::figure(1);
-    plt::plot(x, y, "r.");
-    plt::plot(originX, originY, "b.");
-
-    plt::grid("True");
-    plt::axis("equal");
-    plt::xlabel("x");
-    plt::ylabel("y");
-
-    plt::figure(2);
-    plt::plot(s, heading, "r.");
-    plt::plot(acumulateS, originHeading, "b.");
-
-    plt::grid("True");
-    //plt::axis("equal");
-    plt::xlabel("s");
-    plt::ylabel("heading");
-
-    plt::figure(3);
-    plt::plot(s, kappa, "r-");
-
-    plt::grid("True");
-    //plt::axis("equal");
-    plt::xlabel("s");
-    plt::ylabel("steering-angle");
-
-    plt::figure(4);
-    plt::plot(s, dkappa, "r-");
-
-    plt::grid("True");
-    //plt::axis("equal");
-    plt::xlabel("s");
-    plt::ylabel("dkappa");
+//    // get results
+//    std::vector<ReferencePoint> originPoints = referenceLine.referencePoints();
+//    std::vector<double> originS = referenceLine.accumulateS();
+//    std::vector<ReferencePoint> refPoints = referenceLineResult.referencePoints();
+//    std::vector<double> s = referenceLineResult.accumulateS();
+//
+//    //transData.createPathGuass(refPoints);
+//
+//    std::cout << "平滑距离 s = " << s.back() << std::endl;
+//
+//    // plot
+//    MapPoint pointInfo = originPoints[0].pointInfo();
+//    double zeroX = pointInfo.x();
+//    double zeroY = pointInfo.y();
+//    std::vector<double> originX, originY, originHeading;
+//    std::vector<std::pair<double, double>> xyPoints;
+//    for(auto const & point : originPoints)
+//    {
+//        pointInfo = point.pointInfo();
+//        originX.emplace_back(pointInfo.x() - zeroX);
+//        originY.emplace_back(pointInfo.y() - zeroY);
+//        originHeading.emplace_back(radianToDegree(pointInfo.heading()));
+//        xyPoints.emplace_back(pointInfo.x() - zeroX, pointInfo.y() - zeroY);
+//    }
+//    std::vector<double> headings, kappas, dkappas, acumulateS;
+//    if(!DiscretePointsMath::ComputePathProfile(xyPoints, &headings, &acumulateS, &kappas, &dkappas))
+//    {
+//        std::cout << "原始参考线计算heading错误!" << std::endl;
+//    }
+//    for(size_t i = 0; i < headings.size(); ++i)
+//    {
+//        double angle = -headings[i] - degreeToRadian(90);
+//        double a = std::fmod(angle + M_PI, 2.0 * M_PI);
+//        if(a < 0.0)
+//        {
+//            a = a + 2.0 * M_PI;
+//        }
+//        headings[i] = radianToDegree(a);
+//    }
+//
+//    std::vector<double> x, y, heading, kappa, dkappa;
+//    for (auto const &point : refPoints)
+//    {
+//        pointInfo = point.pointInfo();
+//        x.emplace_back(pointInfo.x() - zeroX);
+//        y.emplace_back(pointInfo.y() - zeroY);
+//        heading.emplace_back(radianToDegree(pointInfo.heading()));
+//        kappa.emplace_back(std::atan(point.kappa()));
+////        kappa.emplace_back(point.kappa());
+//        dkappa.emplace_back(point.dkappa());
+//    }
+//
+//    plt::figure(1);
+//    plt::plot(x, y, "r.");
+//    plt::plot(originX, originY, "b.");
+//
+//    plt::grid("True");
+//    plt::axis("equal");
+//    plt::xlabel("x");
+//    plt::ylabel("y");
+//
+//    plt::figure(2);
+//    plt::plot(s, heading, "r.");
+//    plt::plot(acumulateS, originHeading, "b.");
+//
+//    plt::grid("True");
+//    //plt::axis("equal");
+//    plt::xlabel("s");
+//    plt::ylabel("heading");
+//
+//    plt::figure(3);
+//    plt::plot(s, kappa, "r-");
+//
+//    plt::grid("True");
+//    //plt::axis("equal");
+//    plt::xlabel("s");
+//    plt::ylabel("steering-angle");
+//
+//    plt::figure(4);
+//    plt::plot(s, dkappa, "r-");
+//
+//    plt::grid("True");
+//    //plt::axis("equal");
+//    plt::xlabel("s");
+//    plt::ylabel("dkappa");
 
     plt::show();
     return 0;
@@ -194,6 +193,88 @@ int main1()
 
     return 0;
 }
+
+int main3()
+{
+    clock_t startTime, endTime;
+    using planning::TransData;
+    using planning::ReferenceLine;
+    using planning::ReferenceLineProvide;
+    using planning::ReferencePoint;
+    using had_map::MapPoint;
+    using planning::DiscretePointsMath;
+
+    ReferenceLine referenceLine;
+    TransData transData;
+    transData.createReferenceLine(referenceLine);
+
+// get results
+    std::vector<ReferencePoint> originPoints = referenceLine.referencePoints();
+    std::vector<double> originS = referenceLine.accumulateS();
+
+    // plot
+    MapPoint pointInfo = originPoints[0].pointInfo();
+    double zeroX = pointInfo.x();
+    double zeroY = pointInfo.y();
+    std::vector<double> originX, originY, originHeading;
+    std::vector<std::pair<double, double>> xyPoints;
+    for(auto const & point : originPoints)
+    {
+        pointInfo = point.pointInfo();
+        originX.emplace_back(pointInfo.x());
+        originY.emplace_back(pointInfo.y());
+        originHeading.emplace_back(radianToDegree(pointInfo.heading()));
+        xyPoints.emplace_back(pointInfo.x(), pointInfo.y());
+    }
+    std::vector<double> headings, kappas, dkappas, acumulateS;
+    if(!DiscretePointsMath::ComputePathProfile(xyPoints, &headings, &acumulateS, &kappas, &dkappas))
+    {
+        std::cout << "原始参考线计算heading错误!" << std::endl;
+    }
+    for(size_t i = 0; i < headings.size(); ++i)
+    {
+        double angle = -headings[i] - degreeToRadian(90);
+        double a = std::fmod(angle + M_PI, 2.0 * M_PI);
+        if(a < 0.0)
+        {
+            a = a + 2.0 * M_PI;
+        }
+        headings[i] = radianToDegree(a);
+    }
+
+
+    plt::figure(1);
+    plt::plot(originX, originY, "r.");
+    plt::grid("True");
+    plt::axis("equal");
+    plt::xlabel("x");
+    plt::ylabel("y");
+
+    plt::figure(2);
+    plt::plot(acumulateS, originHeading, "b.");
+
+    plt::grid("True");
+    plt::axis("equal");
+    plt::xlabel("s");
+    plt::ylabel("heading");
+
+    plt::figure(3);
+    plt::grid("True");
+    plt::axis("equal");
+    plt::xlabel("s");
+    plt::ylabel("steering-angle");
+
+    plt::figure(4);
+    plt::grid("True");
+    plt::axis("equal");
+    plt::xlabel("s");
+    plt::ylabel("dkappa");
+
+    plt::show();
+
+    return 0;
+}
+
 
 int main()
 {

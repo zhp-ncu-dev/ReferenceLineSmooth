@@ -36,8 +36,21 @@ namespace planning
         anchorPointsLateralBounds.front() = 0.0;
         anchorPointsLateralBounds.back() = 0.0;
 
-        normalizePoints(&rawPoints2d);
+        rawPoints2d.clear();
+        anchorPointsLateralBounds.clear();
+        for(float index = 0.0; index < 50.0; index = index + 1.0) {
+            float y = 0.0;
+            if(index >= 30.0 && index < 40.0) {
+                y = 10.0;
+            }
+            rawPoints2d.emplace_back(index, y);
+            anchorPointsLateralBounds.emplace_back(40.0);
+        }
+        anchorPointsLateralBounds.front() = 0.0;
+        anchorPointsLateralBounds.back() = 0.0;
 
+
+        normalizePoints(&rawPoints2d);
         std::vector<std::pair<double, double>> smoothedPoints2d;
         if(!femPosSmooth(rawPoints2d, anchorPointsLateralBounds, &smoothedPoints2d))
         {
@@ -46,10 +59,32 @@ namespace planning
         }
         deNormalizePoints(&smoothedPoints2d);
 
-        std::vector<std::pair<double, double>> points;
-        std::vector<double> smoothedHeadings;
-        curveInterpolate(smoothedPoints2d, points, smoothedHeadings, deltaS);
-        generateRefPointProfile(points, smoothedHeadings, smoothedReferenceLine);
+
+        std::vector<double> x, y, originX, originY;
+        for (const auto &point : smoothedPoints2d)
+        {
+            x.emplace_back(point.first);
+            y.emplace_back(point.second);
+        }
+        for(const auto& point : rawPoints2d)
+        {
+            originX.emplace_back(point.first);
+            originY.emplace_back(point.second);
+        }
+
+        plt::plot(x, y, "r-");
+        plt::plot(originX, originY, "b-");
+
+        plt::grid("True");
+        plt::axis("equal");
+        plt::xlabel("x");
+        plt::ylabel("y");
+
+
+//        std::vector<std::pair<double, double>> points;
+//        std::vector<double> smoothedHeadings;
+//        curveInterpolate(smoothedPoints2d, points, smoothedHeadings, deltaS);
+//        generateRefPointProfile(points, smoothedHeadings, smoothedReferenceLine);
 
         return true;
     }

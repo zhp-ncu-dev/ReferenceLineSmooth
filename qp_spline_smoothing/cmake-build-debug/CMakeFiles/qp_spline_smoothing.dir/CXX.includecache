@@ -328,14 +328,6 @@ vector
 reference_line/reference_line.h
 ../include/common/smooth_line/discreted_points_smooth/reference_line/reference_line.h
 
-../include/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.h
-utility
--
-vector
--
-osqp/osqp.h
-../include/common/smooth_line/discreted_points_smooth/osqp/osqp.h
-
 ../include/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.h
 utility
 -
@@ -491,26 +483,6 @@ common/pnc_point/sl_point.h
 ../include/reference_line/reference_point.h
 common/pnc_point/map_point.h
 ../include/reference_line/common/pnc_point/map_point.h
-
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.cpp
-limits
--
-iostream
--
-common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.h
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.h
-
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.cpp
-iostream
--
-limits
--
-common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.h
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.h
-common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.h
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/common/smooth_line/discreted_points_smooth/fem_pos_deviation_osqp_interface.h
-common/smooth_line/discreted_points_smooth/fem_pos_deviation_sqp_osqp_interface.h
-/home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/common/smooth_line/discreted_points_smooth/common/smooth_line/discreted_points_smooth/fem_pos_deviation_sqp_osqp_interface.h
 
 /home/zhp/projs/my/ReferenceLineSmooth/qp_spline_smoothing/source/reference_line/discrete_points_reference_line_smooth.cpp
 common/smooth_line/discreted_points_smooth/fem_pos_deviation_smoother.h
